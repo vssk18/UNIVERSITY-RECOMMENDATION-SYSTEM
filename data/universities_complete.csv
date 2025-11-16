@@ -1,0 +1,471 @@
+name,country,region,city,course_type,program,degree,global_rank,subject_rank,ielts_min,gre_required,on_campus,security_focus,has_research_lab,tuition_usd,total_usd
+Stanford University,USA,USA,Stanford,STEM,MS in Computer Science,MS,3,2,7.0,optional,true,systems+crypto+ai,true,62000,86000
+Massachusetts Institute of Technology,USA,USA,Cambridge,STEM,MS in EECS,MS,1,1,7.0,optional,true,systems+ai+theory,true,58000,85000
+Carnegie Mellon University,USA,USA,Pittsburgh,STEM,MS in Information Security,MS,28,5,7.0,false,true,systems+network+security,true,60000,88000
+UC Berkeley,USA,USA,Berkeley,STEM,MS in EECS,MS,4,3,7.0,optional,true,systems+ai+theory,true,56000,82000
+University of Illinois Urbana-Champaign,USA,USA,Urbana,STEM,MS in Computer Science,MS,47,8,6.5,optional,true,systems+security,true,38000,62000
+Georgia Institute of Technology,USA,USA,Atlanta,STEM,MS in Cybersecurity,MS,38,12,6.5,optional,true,systems+network,true,35000,58000
+University of Michigan Ann Arbor,USA,USA,Ann Arbor,STEM,MS in Computer Science,MS,25,10,6.5,optional,true,systems+ai,true,52000,75000
+Cornell University,USA,USA,Ithaca,STEM,MEng in Computer Science,MS,12,7,7.0,optional,true,systems+theory,true,58000,82000
+University of Texas at Austin,USA,USA,Austin,STEM,MS in Computer Science,MS,32,15,7.0,optional,true,systems+security,true,40000,65000
+University of Washington,USA,USA,Seattle,STEM,MS in Computer Science,MS,29,11,7.0,optional,true,systems+security,true,48000,72000
+Princeton University,USA,USA,Princeton,STEM,MS in Computer Science,MS,6,6,7.0,optional,true,theory+systems,true,60000,85000
+Columbia University,USA,USA,New York,STEM,MS in Computer Science,MS,22,18,7.0,optional,true,systems+security,true,62000,95000
+University of California San Diego,USA,USA,San Diego,STEM,MS in Computer Science,MS,21,14,7.0,optional,true,systems+network,true,35000,65000
+University of Southern California,USA,USA,Los Angeles,STEM,MS in Computer Science,MS,112,25,6.5,optional,true,systems+security,true,56000,85000
+University of Pennsylvania,USA,USA,Philadelphia,STEM,MSE in Computer Science,MS,13,20,7.0,optional,true,systems+ai,true,58000,88000
+Yale University,USA,USA,New Haven,STEM,MS in Computer Science,MS,9,22,7.0,optional,true,theory+systems,true,56000,82000
+University of California Los Angeles,USA,USA,Los Angeles,STEM,MS in Computer Science,MS,44,16,7.0,optional,true,systems+security,true,42000,72000
+Duke University,USA,USA,Durham,STEM,MS in Computer Science,MS,52,28,7.0,optional,true,systems+security,true,58000,82000
+New York University,USA,USA,New York,STEM,MS in Cybersecurity,MS,39,30,7.0,optional,true,security+network,true,56000,92000
+Northwestern University,USA,USA,Evanston,STEM,MS in Computer Science,MS,31,32,7.0,optional,true,systems+ai,true,60000,85000
+University of Maryland College Park,USA,USA,College Park,STEM,MS in Computer Science,MS,51,24,6.5,optional,true,systems+security,true,38000,62000
+Purdue University,USA,USA,West Lafayette,STEM,MS in Computer Science,MS,129,35,6.5,optional,true,systems+security,true,32000,56000
+University of California Irvine,USA,USA,Irvine,STEM,MS in Computer Science,MS,235,40,6.5,optional,true,systems+network,true,38000,65000
+Ohio State University,USA,USA,Columbus,STEM,MS in Computer Science,MS,80,45,6.5,optional,true,systems,true,35000,58000
+Pennsylvania State University,USA,USA,University Park,STEM,MS in Computer Science,MS,93,38,6.5,optional,true,systems+security,true,38000,64000
+University of Wisconsin Madison,USA,USA,Madison,STEM,MS in Computer Science,MS,42,26,6.5,optional,true,systems+theory,true,36000,60000
+Boston University,USA,USA,Boston,STEM,MS in Computer Science,MS,108,48,6.5,optional,true,systems,true,58000,85000
+Northeastern University,USA,USA,Boston,STEM,MS in Cybersecurity,MS,176,60,6.5,optional,true,systems+security,true,56000,82000
+University of Minnesota Twin Cities,USA,USA,Minneapolis,STEM,MS in Computer Science,MS,66,42,6.5,optional,true,systems+security,true,34000,58000
+Rice University,USA,USA,Houston,STEM,MS in Computer Science,MS,89,36,7.0,optional,true,systems+security,true,52000,75000
+University of North Carolina Chapel Hill,USA,USA,Chapel Hill,STEM,MS in Computer Science,MS,28,34,7.0,optional,true,systems,true,38000,65000
+Virginia Tech,USA,USA,Blacksburg,STEM,MS in Computer Science,MS,241,52,6.5,optional,true,systems+security,true,32000,55000
+Arizona State University,USA,USA,Tempe,STEM,MS in Computer Science,MS,179,55,6.5,optional,true,systems,true,32000,58000
+Stony Brook University,USA,USA,Stony Brook,STEM,MS in Computer Science,MS,334,62,6.5,optional,true,systems+security,true,28000,52000
+University of Florida,USA,USA,Gainesville,STEM,MS in Computer Science,MS,167,58,6.5,optional,true,systems,true,30000,54000
+Rutgers University,USA,USA,New Brunswick,STEM,MS in Computer Science,MS,142,50,6.5,optional,true,systems,true,34000,60000
+Texas A&M University,USA,USA,College Station,STEM,MS in Computer Science,MS,130,46,6.5,optional,true,systems,true,30000,55000
+University of Colorado Boulder,USA,USA,Boulder,STEM,MS in Computer Science,MS,268,65,6.5,optional,true,systems+security,true,36000,62000
+Indiana University Bloomington,USA,USA,Bloomington,STEM,MS in Computer Science,MS,307,72,6.5,optional,true,systems,true,32000,56000
+University of Pittsburgh,USA,USA,Pittsburgh,STEM,MS in Computer Science,MS,164,68,6.5,optional,true,systems,true,35000,60000
+Stevens Institute of Technology,USA,USA,Hoboken,STEM,MS in Cybersecurity,MS,298,75,6.5,optional,true,security+network,true,48000,75000
+RIT Rochester,USA,USA,Rochester,STEM,MS in Cybersecurity,MS,362,80,6.5,optional,true,security,true,46000,70000
+Syracuse University,USA,USA,Syracuse,STEM,MS in Cybersecurity,MS,340,78,6.5,optional,true,security+network,true,44000,68000
+George Mason University,USA,USA,Fairfax,STEM,MS in Computer Science,MS,485,85,6.5,optional,true,systems+security,true,32000,58000
+University of Delaware,USA,USA,Newark,STEM,MS in Computer Science,MS,498,88,6.5,optional,true,systems,true,32000,56000
+Iowa State University,USA,USA,Ames,STEM,MS in Computer Science,MS,424,82,6.5,optional,true,systems,true,28000,52000
+NC State University,USA,USA,Raleigh,STEM,MS in Computer Science,MS,420,76,6.5,optional,true,systems+security,true,30000,55000
+University of Central Florida,USA,USA,Orlando,STEM,MS in Computer Science,MS,540,92,6.5,optional,true,systems,true,28000,52000
+University of Texas Dallas,USA,USA,Richardson,STEM,MS in Computer Science,MS,601,95,6.5,optional,true,systems,true,28000,52000
+University of Arizona,USA,USA,Tucson,STEM,MS in Computer Science,MS,155,70,6.5,optional,true,systems,true,32000,56000
+SUNY Buffalo,USA,USA,Buffalo,STEM,MS in Computer Science,MS,388,84,6.5,optional,true,systems,true,28000,52000
+Drexel University,USA,USA,Philadelphia,STEM,MS in Cybersecurity,MS,556,98,6.5,optional,true,security,true,42000,68000
+New Jersey Institute of Technology,USA,USA,Newark,STEM,MS in Cybersecurity,MS,651,102,6.5,optional,true,security,true,34000,58000
+University of Kansas,USA,USA,Lawrence,STEM,MS in Computer Science,MS,465,90,6.5,optional,true,systems,true,28000,52000
+University of Connecticut,USA,USA,Storrs,STEM,MS in Computer Science,MS,436,86,6.5,optional,true,systems,true,32000,56000
+Clemson University,USA,USA,Clemson,STEM,MS in Computer Science,MS,580,96,6.5,optional,true,systems,true,30000,54000
+University of Oregon,USA,USA,Eugene,STEM,MS in Computer Science,MS,515,94,6.5,optional,true,systems,true,32000,56000
+University of Illinois Chicago,USA,USA,Chicago,STEM,MS in Computer Science,MS,285,74,6.5,optional,true,systems,true,32000,58000
+University of California Riverside,USA,USA,Riverside,STEM,MS in Computer Science,MS,454,88,6.5,optional,true,systems,true,38000,65000
+Worcester Polytechnic Institute,USA,USA,Worcester,STEM,MS in Cybersecurity,MS,612,100,6.5,optional,true,security,true,48000,72000
+Johns Hopkins University,USA,USA,Baltimore,STEM,MS in Computer Science,MS,24,19,7.0,optional,true,systems+security,true,60000,88000
+Brown University,USA,USA,Providence,STEM,MS in Computer Science,MS,63,31,7.0,optional,true,systems+theory,true,62000,88000
+Dartmouth College,USA,USA,Hanover,STEM,MS in Computer Science,MS,261,55,7.0,optional,true,systems,true,60000,85000
+University of California Santa Barbara,USA,USA,Santa Barbara,STEM,MS in Computer Science,MS,155,33,6.5,optional,true,systems+theory,true,38000,68000
+Vanderbilt University,USA,USA,Nashville,STEM,MS in Computer Science,MS,199,64,6.5,optional,true,systems,true,52000,78000
+Washington University St Louis,USA,USA,St Louis,STEM,MS in Computer Science,MS,118,49,6.5,optional,true,systems,true,56000,82000
+Emory University,USA,USA,Atlanta,STEM,MS in Computer Science,MS,155,71,6.5,optional,true,systems,true,54000,80000
+University of California Davis,USA,USA,Davis,STEM,MS in Computer Science,MS,102,44,6.5,optional,true,systems,true,38000,65000
+Case Western Reserve University,USA,USA,Cleveland,STEM,MS in Computer Science,MS,176,66,6.5,optional,true,systems,true,48000,72000
+Rensselaer Polytechnic Institute,USA,USA,Troy,STEM,MS in Computer Science,MS,521,91,6.5,optional,true,systems,true,52000,76000
+University of Rochester,USA,USA,Rochester,STEM,MS in Computer Science,MS,154,62,6.5,optional,true,systems,true,52000,78000
+Lehigh University,USA,USA,Bethlehem,STEM,MS in Computer Science,MS,356,79,6.5,optional,true,systems,true,52000,76000
+University of Miami,USA,USA,Miami,STEM,MS in Computer Science,MS,251,73,6.5,optional,true,systems,true,48000,75000
+Michigan State University,USA,USA,East Lansing,STEM,MS in Computer Science,MS,157,67,6.5,optional,true,systems,true,32000,56000
+University of Iowa,USA,USA,Iowa City,STEM,MS in Computer Science,MS,295,77,6.5,optional,true,systems,true,30000,54000
+Florida State University,USA,USA,Tallahassee,STEM,MS in Computer Science,MS,295,81,6.5,optional,true,systems,true,28000,52000
+Oregon State University,USA,USA,Corvallis,STEM,MS in Computer Science,MS,426,87,6.5,optional,true,systems,true,30000,54000
+University of Nebraska Lincoln,USA,USA,Lincoln,STEM,MS in Computer Science,MS,651,97,6.5,optional,true,systems,true,26000,48000
+University of Alabama,USA,USA,Tuscaloosa,STEM,MS in Computer Science,MS,701,101,6.5,optional,true,systems,true,26000,48000
+University of South Carolina,USA,USA,Columbia,STEM,MS in Computer Science,MS,431,89,6.5,optional,true,systems,true,30000,54000
+Louisiana State University,USA,USA,Baton Rouge,STEM,MS in Computer Science,MS,801,105,6.5,optional,true,systems,true,26000,48000
+University of New Mexico,USA,USA,Albuquerque,STEM,MS in Computer Science,MS,651,99,6.5,optional,true,systems,true,26000,48000
+University of Tennessee Knoxville,USA,USA,Knoxville,STEM,MS in Computer Science,MS,601,93,6.5,optional,true,systems,true,28000,52000
+University of Kentucky,USA,USA,Lexington,STEM,MS in Computer Science,MS,521,94,6.5,optional,true,systems,true,28000,52000
+Colorado State University,USA,USA,Fort Collins,STEM,MS in Computer Science,MS,431,86,6.5,optional,true,systems,true,30000,54000
+University of Oklahoma,USA,USA,Norman,STEM,MS in Computer Science,MS,601,96,6.5,optional,true,systems,true,26000,48000
+Wayne State University,USA,USA,Detroit,STEM,MS in Computer Science,MS,651,103,6.5,optional,true,systems,true,28000,52000
+University of Massachusetts Amherst,USA,USA,Amherst,STEM,MS in Computer Science,MS,246,59,6.5,optional,true,systems+ai,true,34000,58000
+University of California Santa Cruz,USA,USA,Santa Cruz,STEM,MS in Computer Science,MS,332,69,6.5,optional,true,systems,true,38000,68000
+George Washington University,USA,USA,Washington DC,STEM,MS in Computer Science,MS,308,76,6.5,optional,true,systems,true,54000,88000
+Tufts University,USA,USA,Medford,STEM,MS in Computer Science,MS,275,72,6.5,optional,true,systems,true,58000,86000
+Tulane University,USA,USA,New Orleans,STEM,MS in Computer Science,MS,435,88,6.5,optional,true,systems,true,52000,76000
+American University,USA,USA,Washington DC,STEM,MS in Computer Science,MS,701,107,6.5,optional,true,systems,true,48000,78000
+Fordham University,USA,USA,New York,STEM,MS in Cybersecurity,MS,801,112,6.5,optional,true,security,true,52000,88000
+Santa Clara University,USA,USA,Santa Clara,STEM,MS in Computer Science,MS,601,98,6.5,optional,true,systems,true,52000,82000
+Illinois Institute of Technology,USA,USA,Chicago,STEM,MS in Computer Science,MS,421,85,6.5,optional,true,systems,true,46000,72000
+Clarkson University,USA,USA,Potsdam,STEM,MS in Computer Science,MS,801,115,6.5,optional,true,systems,true,42000,65000
+Missouri University Science Tech,USA,USA,Rolla,STEM,MS in Computer Science,MS,801,118,6.5,optional,true,systems,true,28000,50000
+University of Texas Arlington,USA,USA,Arlington,STEM,MS in Computer Science,MS,801,114,6.5,optional,true,systems,true,26000,48000
+University of Houston,USA,USA,Houston,STEM,MS in Computer Science,MS,701,104,6.5,optional,true,systems,true,28000,52000
+Florida International University,USA,USA,Miami,STEM,MS in Computer Science,MS,801,116,6.5,optional,true,systems,true,28000,52000
+University of Texas San Antonio,USA,USA,San Antonio,STEM,MS in Cybersecurity,MS,801,120,6.5,optional,true,security,true,26000,48000
+Harvard Business School,USA,USA,Boston,MBA,MBA,MBA,1,1,7.0,optional,true,mba,true,112000,140000
+Stanford GSB,USA,USA,Stanford,MBA,MBA,MBA,3,2,7.0,optional,true,mba,true,115000,145000
+Wharton School,USA,USA,Philadelphia,MBA,MBA,MBA,13,3,7.0,optional,true,mba+finance,true,105000,135000
+MIT Sloan,USA,USA,Cambridge,MBA,MBA,MBA,1,4,7.0,optional,true,mba+analytics,true,102000,132000
+Columbia Business School,USA,USA,New York,MBA,MBA,MBA,22,6,7.0,optional,true,mba+finance,true,108000,145000
+Booth School of Business,USA,USA,Chicago,MBA,MBA,MBA,21,5,7.0,optional,true,mba+analytics,true,104000,138000
+Kellogg School,USA,USA,Evanston,MBA,MBA,MBA,31,7,7.0,optional,true,mba+marketing,true,105000,135000
+Haas School of Business,USA,USA,Berkeley,MBA,MBA,MBA,4,8,7.0,optional,true,mba+innovation,true,98000,128000
+Yale SOM,USA,USA,New Haven,MBA,MBA,MBA,9,10,7.0,optional,true,mba,true,95000,125000
+NYU Stern,USA,USA,New York,MBA,MBA,MBA,39,12,7.0,optional,true,mba+finance,true,98000,138000
+Duke Fuqua,USA,USA,Durham,MBA,MBA,MBA,52,14,7.0,optional,true,mba,true,92000,122000
+Ross School of Business,USA,USA,Ann Arbor,MBA,MBA,MBA,25,11,7.0,optional,true,mba,true,95000,125000
+Darden School of Business,USA,USA,Charlottesville,MBA,MBA,MBA,226,16,7.0,optional,true,mba,true,90000,118000
+Cornell Johnson,USA,USA,Ithaca,MBA,MBA,MBA,12,15,7.0,optional,true,mba,true,92000,120000
+Carnegie Mellon Tepper,USA,USA,Pittsburgh,MBA,MBA,MBA,28,18,7.0,optional,true,mba+analytics,true,96000,126000
+UCLA Anderson,USA,USA,Los Angeles,MBA,MBA,MBA,44,17,7.0,optional,true,mba+entertainment,true,94000,132000
+USC Marshall,USA,USA,Los Angeles,MBA,MBA,MBA,112,22,7.0,optional,true,mba,true,92000,130000
+UT Austin McCombs,USA,USA,Austin,MBA,MBA,MBA,32,20,7.0,optional,true,mba+tech,true,88000,115000
+University of Virginia Darden,USA,USA,Charlottesville,MBA,MBA,MBA,226,16,7.0,optional,true,mba,true,90000,118000
+Georgetown McDonough,USA,USA,Washington DC,MBA,MBA,MBA,281,28,7.0,optional,true,mba,true,88000,120000
+Emory Goizueta,USA,USA,Atlanta,MBA,MBA,MBA,155,30,7.0,optional,true,mba,true,85000,115000
+University of North Carolina Kenan-Flagler,USA,USA,Chapel Hill,MBA,MBA,MBA,28,24,7.0,optional,true,mba,true,84000,112000
+Indiana Kelley,USA,USA,Bloomington,MBA,MBA,MBA,307,32,7.0,optional,true,mba,true,78000,105000
+Washington Foster,USA,USA,Seattle,MBA,MBA,MBA,29,26,7.0,optional,true,mba+tech,true,82000,112000
+Johns Hopkins Carey,USA,USA,Baltimore,MBA,MBA,MBA,24,35,7.0,optional,true,mba+healthcare,true,85000,118000
+Johns Hopkins School of Public Health,USA,USA,Baltimore,Health,MPH in Epidemiology,MPH,24,5,7.0,optional,true,public_health,true,60000,88000
+Harvard School of Public Health,USA,USA,Boston,Health,MPH,MPH,1,1,7.0,optional,true,public_health+policy,true,65000,95000
+Columbia Mailman School,USA,USA,New York,Health,MPH,MPH,22,8,7.0,optional,true,public_health,true,62000,98000
+UC Berkeley School of Public Health,USA,USA,Berkeley,Health,MPH,MPH,4,12,7.0,optional,true,environmental_health,true,42000,72000
+University of Michigan School of Public Health,USA,USA,Ann Arbor,Health,MPH,MPH,25,15,6.5,optional,true,public_health,true,48000,72000
+UNC Gillings School,USA,USA,Chapel Hill,Health,MPH,MPH,28,18,6.5,optional,true,public_health,true,38000,62000
+Emory Rollins School,USA,USA,Atlanta,Health,MPH,MPH,155,22,6.5,optional,true,global_health,true,48000,75000
+University of Washington School of Public Health,USA,USA,Seattle,Health,MPH,MPH,29,20,6.5,optional,true,public_health,true,42000,68000
+Boston University School of Public Health,USA,USA,Boston,Health,MPH,MPH,108,28,6.5,optional,true,public_health,true,54000,82000
+University of Minnesota School of Public Health,USA,USA,Minneapolis,Health,MPH,MPH,66,32,6.5,optional,true,public_health,true,38000,62000
+Yale School of Art,USA,USA,New Haven,Arts,MFA in Graphic Design,MFA,9,5,7.0,optional,true,design+visual,true,68000,95000
+Rhode Island School of Design,USA,USA,Providence,Arts,MFA in Graphic Design,MFA,0,8,7.0,optional,true,design+digital,true,58000,82000
+Parsons School of Design,USA,USA,New York,Arts,MFA in Design Technology,MFA,0,12,6.5,optional,true,design+innovation,true,52000,88000
+Pratt Institute,USA,USA,New York,Arts,MFA in Digital Arts,MFA,0,18,6.5,optional,true,design+media,true,54000,90000
+School of Visual Arts,USA,USA,New York,Arts,MFA in Computer Art,MFA,0,22,6.5,optional,true,digital_art,true,48000,85000
+California Institute of Arts,USA,USA,Valencia,Arts,MFA in Experimental Animation,MFA,0,15,6.5,optional,true,animation+film,true,52000,78000
+Art Center College of Design,USA,USA,Pasadena,Arts,MS in Industrial Design,MS,0,20,6.5,optional,true,product_design,true,48000,78000
+Carnegie Mellon School of Design,USA,USA,Pittsburgh,Arts,MDes in Interaction Design,MDes,28,10,7.0,optional,true,interaction+ux,true,58000,85000
+MIT Media Lab,USA,USA,Cambridge,Arts,MS in Media Arts,MS,1,3,7.0,optional,true,media+technology,true,60000,88000
+NYU Tisch School,USA,USA,New York,Arts,MFA in Film Production,MFA,39,25,7.0,optional,true,film+media,true,68000,108000
+USC Thornton School,USA,USA,Los Angeles,Finance,MS in Music Industry,MS,112,0,6.5,optional,true,music_business,true,62000,98000
+Berklee College of Music,USA,USA,Boston,Arts,MM in Music Production,MM,0,8,6.5,optional,true,music+technology,true,52000,82000
+NYU Stern,USA,USA,New York,Finance,MS in Finance,MS,39,15,7.0,optional,true,finance+markets,true,78000,118000
+MIT Sloan,USA,USA,Cambridge,Finance,Master of Finance,MFin,1,2,7.0,optional,true,finance+quant,true,82000,115000
+Princeton Bendheim,USA,USA,Princeton,Finance,Master in Finance,MFin,6,8,7.0,optional,true,financial_engineering,true,85000,118000
+Columbia Financial Engineering,USA,USA,New York,Finance,MS in Financial Engineering,MS,22,12,7.0,optional,true,quant+trading,true,78000,125000
+UC Berkeley Haas,USA,USA,Berkeley,Finance,Master of Financial Engineering,MFE,4,5,7.0,optional,true,financial_engineering,true,72000,105000
+Carnegie Mellon MSCF,USA,USA,Pittsburgh,Finance,MS in Computational Finance,MS,28,10,7.0,optional,true,quant+finance,true,88000,118000
+Vanderbilt Owen,USA,USA,Nashville,Finance,MS in Finance,MS,199,38,6.5,optional,true,finance,true,58000,85000
+Johns Hopkins Carey,USA,USA,Baltimore,Finance,MS in Finance,MS,24,28,7.0,optional,true,finance+analytics,true,68000,98000
+University of Rochester Simon,USA,USA,Rochester,Finance,MS in Finance,MS,154,32,6.5,optional,true,finance,true,58000,85000
+Boston College Carroll,USA,USA,Chestnut Hill,Finance,MS in Finance,MS,601,45,6.5,optional,true,finance,true,62000,92000
+Arizona State University,USA,USA,Tempe,MIS,MS in Information Management,MIS,179,42,6.5,optional,true,mis+analytics,true,42000,68000
+University of Texas Austin,USA,USA,Austin,MIS,MS in Information Studies,MIS,32,18,6.5,optional,true,mis+data,true,38000,65000
+Carnegie Mellon Heinz,USA,USA,Pittsburgh,MIS,MS in Information Systems Management,MIS,28,8,7.0,optional,true,mis+tech,true,65000,92000
+NYU Stern,USA,USA,New York,MIS,MS in Business Analytics,MIS,39,22,7.0,optional,true,analytics+business,true,72000,112000
+MIT Sloan,USA,USA,Cambridge,MIS,Master of Business Analytics,MIS,1,5,7.0,optional,true,analytics+ai,true,78000,108000
+Georgia Tech,USA,USA,Atlanta,MIS,MS in Analytics,MIS,38,12,6.5,optional,true,analytics+ml,true,42000,68000
+Northwestern,USA,USA,Evanston,MIS,MS in Analytics,MIS,31,15,7.0,optional,true,analytics,true,72000,105000
+University of Southern California,USA,USA,Los Angeles,MIS,MS in Business Analytics,MIS,112,28,6.5,optional,true,analytics+tech,true,62000,98000
+UC San Diego Rady,USA,USA,San Diego,MIS,MS in Business Analytics,MIS,21,25,6.5,optional,true,analytics,true,52000,82000
+University of Washington,USA,USA,Seattle,MIS,MS in Information Management,MIS,29,20,6.5,optional,true,mis+data,true,45000,72000
+Tsinghua University,China,Asia,Beijing,STEM,MS in Computer Science,MS,14,5,6.5,optional,true,systems+ai,true,8000,22000
+Peking University,China,Asia,Beijing,STEM,MS in Computer Science,MS,17,7,6.5,optional,true,systems+ai,true,8000,22000
+Fudan University,China,Asia,Shanghai,STEM,MS in Computer Science,MS,50,18,6.5,optional,true,systems,true,8000,20000
+Shanghai Jiao Tong University,China,Asia,Shanghai,STEM,MS in Computer Science,MS,46,16,6.5,optional,true,systems+ai,true,8000,20000
+Zhejiang University,China,Asia,Hangzhou,STEM,MS in Computer Science,MS,42,14,6.5,optional,true,systems+ai,true,7500,18000
+University of Science and Technology China,China,Asia,Hefei,STEM,MS in Computer Science,MS,89,22,6.5,optional,true,systems,true,7000,18000
+Nanjing University,China,Asia,Nanjing,STEM,MS in Computer Science,MS,133,28,6.5,optional,true,systems,true,7000,17000
+Harbin Institute of Technology,China,Asia,Harbin,STEM,MS in Computer Science,MS,236,35,6.5,optional,true,systems,true,6500,16000
+Beihang University,China,Asia,Beijing,STEM,MS in Computer Science,MS,268,40,6.5,optional,true,systems,true,7000,17000
+Xi'an Jiaotong University,China,Asia,Xi'an,STEM,MS in Computer Science,MS,290,42,6.5,optional,true,systems,true,6500,16000
+Southeast University,China,Asia,Nanjing,STEM,MS in Computer Science,MS,346,48,6.5,optional,true,systems,true,6500,16000
+Wuhan University,China,Asia,Wuhan,STEM,MS in Computer Science,MS,225,38,6.5,optional,true,systems,true,6500,16000
+Sun Yat-sen University,China,Asia,Guangzhou,STEM,MS in Computer Science,MS,267,44,6.5,optional,true,systems,true,6500,16000
+Huazhong University of Science and Technology,China,Asia,Wuhan,STEM,MS in Computer Science,MS,406,52,6.5,optional,true,systems,true,6500,16000
+Sichuan University,China,Asia,Chengdu,STEM,MS in Computer Science,MS,459,56,6.5,optional,true,systems,true,6000,15000
+Tianjin University,China,Asia,Tianjin,STEM,MS in Computer Engineering,MS,498,60,6.5,optional,true,systems,true,6000,15000
+Beijing Institute of Technology,China,Asia,Beijing,STEM,MS in Computer Science,MS,401,54,6.5,optional,true,systems,true,6500,16000
+Dalian University of Technology,China,Asia,Dalian,STEM,MS in Computer Science,MS,571,64,6.5,optional,true,systems,true,6000,15000
+Tongji University,China,Asia,Shanghai,STEM,MS in Software Engineering,MS,212,46,6.5,optional,true,software,true,7000,17000
+South China University of Technology,China,Asia,Guangzhou,STEM,MS in Computer Science,MS,601,68,6.5,optional,true,systems,true,6000,15000
+National University of Singapore,Singapore,Asia,Singapore,STEM,MS in Computer Science,MS,11,8,6.5,optional,true,systems+network,true,30000,55000
+Nanyang Technological University,Singapore,Asia,Singapore,STEM,MS in Cyber Security,MS,26,12,6.5,optional,true,systems+security,true,32000,58000
+Singapore Management University,Singapore,Asia,Singapore,STEM,MS in Information Systems,MS,545,75,6.5,optional,true,systems+analytics,true,38000,62000
+University of Hong Kong,Hong Kong,Asia,Hong Kong,STEM,MSc in Computer Science,MS,21,15,6.5,optional,true,systems+ai,true,35000,62000
+Hong Kong University of Science and Technology,Hong Kong,Asia,Hong Kong,STEM,MSc in Information Technology,MS,60,20,6.5,optional,true,systems+security,true,32000,58000
+Chinese University of Hong Kong,Hong Kong,Asia,Hong Kong,STEM,MSc in Computer Science,MS,47,24,6.5,optional,true,systems,true,30000,55000
+Hong Kong Polytechnic University,Hong Kong,Asia,Hong Kong,STEM,MSc in Information Security,MS,65,32,6.5,optional,true,security,true,28000,52000
+City University of Hong Kong,Hong Kong,Asia,Hong Kong,STEM,MSc in Computer Science,MS,70,38,6.5,optional,true,systems,true,26000,48000
+University of Tokyo,Japan,Asia,Tokyo,STEM,MS in Information Science,MS,29,11,6.5,optional,true,systems+network,true,10000,28000
+Kyoto University,Japan,Asia,Kyoto,STEM,MS in Informatics,MS,36,13,6.5,optional,true,systems,true,10000,26000
+Tokyo Institute of Technology,Japan,Asia,Tokyo,STEM,MS in Computer Science,MS,91,26,6.5,optional,true,systems,true,10000,26000
+Osaka University,Japan,Asia,Osaka,STEM,MS in Information Science,MS,80,30,6.5,optional,true,systems,true,9000,24000
+Tohoku University,Japan,Asia,Sendai,STEM,MS in Information Science,MS,201,42,6.5,optional,true,systems,true,9000,24000
+Nagoya University,Japan,Asia,Nagoya,STEM,MS in Computer Science,MS,112,36,6.5,optional,true,systems,true,9000,24000
+Kyushu University,Japan,Asia,Fukuoka,STEM,MS in Computer Science,MS,135,40,6.5,optional,true,systems,true,9000,24000
+Hokkaido University,Japan,Asia,Sapporo,STEM,MS in Information Science,MS,141,44,6.5,optional,true,systems,true,9000,24000
+Waseda University,Japan,Asia,Tokyo,STEM,MS in Computer Science,MS,199,48,6.5,optional,true,systems,true,32000,52000
+Keio University,Japan,Asia,Tokyo,STEM,MS in Computer Science,MS,214,50,6.5,optional,true,systems,true,32000,52000
+KAIST,South Korea,Asia,Daejeon,STEM,MS in Computer Science,MS,56,19,6.5,optional,true,systems+ai,true,8000,22000
+Seoul National University,South Korea,Asia,Seoul,STEM,MS in Computer Science,MS,41,17,6.5,optional,true,systems+ai,true,8000,22000
+Yonsei University,South Korea,Asia,Seoul,STEM,MS in Computer Science,MS,76,28,6.5,optional,true,systems,true,12000,26000
+Korea University,South Korea,Asia,Seoul,STEM,MS in Computer Science,MS,79,30,6.5,optional,true,systems,true,12000,26000
+Pohang University,South Korea,Asia,Pohang,STEM,MS in Computer Science,MS,71,25,6.5,optional,true,systems,true,8000,20000
+Sungkyunkwan University,South Korea,Asia,Seoul,STEM,MS in Computer Engineering,MS,97,34,6.5,optional,true,systems,true,10000,24000
+Hanyang University,South Korea,Asia,Seoul,STEM,MS in Computer Science,MS,164,42,6.5,optional,true,systems,true,10000,24000
+Korea Advanced Institute,South Korea,Asia,Seoul,STEM,MS in Software,MS,601,58,6.5,optional,true,software,true,10000,24000
+Ewha Womans University,South Korea,Asia,Seoul,STEM,MS in Computer Science,MS,362,52,6.5,optional,true,systems,true,10000,24000
+Kyung Hee University,South Korea,Asia,Seoul,STEM,MS in Computer Engineering,MS,601,62,6.5,optional,true,systems,true,9000,22000
+IIT Bombay,India,Asia,Mumbai,STEM,MTech in Computer Science,MS,149,45,6.5,optional,true,systems+security,true,2500,8000
+IIT Delhi,India,Asia,New Delhi,STEM,MTech in Computer Science,MS,197,52,6.5,optional,true,systems+security,true,2500,8000
+IIT Madras,India,Asia,Chennai,STEM,MTech in Computer Science,MS,285,58,6.5,optional,true,systems,true,2500,8000
+IIT Kanpur,India,Asia,Kanpur,STEM,MTech in Computer Science,MS,264,56,6.5,optional,true,systems+security,true,2500,8000
+IIT Kharagpur,India,Asia,Kharagpur,STEM,MTech in Computer Science,MS,270,60,6.5,optional,true,systems,true,2500,8000
+IISc Bangalore,India,Asia,Bangalore,STEM,MTech in Computer Science,MS,155,48,6.5,optional,true,systems+theory,true,2500,8000
+IIT Roorkee,India,Asia,Roorkee,STEM,MTech in Computer Science,MS,369,65,6.5,optional,true,systems,true,2500,8000
+IIT Guwahati,India,Asia,Guwahati,STEM,MTech in Computer Science,MS,364,68,6.5,optional,true,systems,true,2500,8000
+IIT Hyderabad,India,Asia,Hyderabad,STEM,MTech in Computer Science,MS,601,72,6.5,optional,true,systems+ai,true,2500,8000
+IIIT Hyderabad,India,Asia,Hyderabad,STEM,MTech in Computer Science,MS,601,75,6.5,optional,true,systems+security,true,8000,15000
+BITS Pilani,India,Asia,Pilani,STEM,ME in Computer Science,MS,801,85,6.5,optional,true,systems,true,12000,18000
+Delhi Technological University,India,Asia,New Delhi,STEM,MTech in Computer Science,MS,801,88,6.5,optional,true,systems,true,3000,9000
+NIT Trichy,India,Asia,Tiruchirappalli,STEM,MTech in Computer Science,MS,801,92,6.5,optional,true,systems,true,2500,8000
+NIT Warangal,India,Asia,Warangal,STEM,MTech in Computer Science,MS,801,95,6.5,optional,true,systems,true,2500,8000
+VIT Vellore,India,Asia,Vellore,STEM,MTech in Computer Science,MS,801,98,6.5,optional,true,systems,true,8000,14000
+Manipal Institute of Technology,India,Asia,Manipal,STEM,MTech in Computer Science,MS,801,102,6.5,optional,true,systems,true,10000,16000
+Amrita University,India,Asia,Coimbatore,STEM,MTech in Cyber Security,MS,801,105,6.5,optional,true,security,true,8000,14000
+National Taiwan University,Taiwan,Asia,Taipei,STEM,MS in Computer Science,MS,68,32,6.5,optional,true,systems,true,4500,16000
+National Tsing Hua University,Taiwan,Asia,Hsinchu,STEM,MS in Computer Science,MS,184,46,6.5,optional,true,systems,true,4500,15000
+National Cheng Kung University,Taiwan,Asia,Tainan,STEM,MS in Computer Science,MS,234,54,6.5,optional,true,systems,true,4000,14000
+National Chiao Tung University,Taiwan,Asia,Hsinchu,STEM,MS in Computer Science,MS,268,58,6.5,optional,true,systems,true,4000,14000
+National Taiwan University of Science,Taiwan,Asia,Taipei,STEM,MS in Computer Science,MS,362,62,6.5,optional,true,systems,true,4000,14000
+Tel Aviv University,Israel,Asia,Tel Aviv,STEM,MSc in Computer Science,MS,198,50,6.5,optional,true,systems+security,true,18000,35000
+Technion,Israel,Asia,Haifa,STEM,MSc in Computer Science,MS,268,54,6.5,optional,true,systems+security,true,16000,32000
+Hebrew University,Israel,Asia,Jerusalem,STEM,MSc in Computer Science,MS,184,48,6.5,optional,true,systems,true,16000,30000
+Ben Gurion University,Israel,Asia,Beer Sheva,STEM,MSc in Cyber Security,MS,365,68,6.5,optional,true,security,true,14000,28000
+Weizmann Institute,Israel,Asia,Rehovot,STEM,MSc in Computer Science,MS,108,42,6.5,optional,true,theory+systems,true,12000,26000
+University of Malaya,Malaysia,Asia,Kuala Lumpur,STEM,MS in Computer Science,MS,70,65,6.0,optional,true,systems,true,8000,16000
+Universiti Teknologi Malaysia,Malaysia,Asia,Johor Bahru,STEM,MS in Computer Science,MS,188,78,6.0,optional,true,systems,true,6000,14000
+Universiti Putra Malaysia,Malaysia,Asia,Serdang,STEM,MS in Computer Science,MS,143,72,6.0,optional,true,systems,true,6000,14000
+Universiti Kebangsaan Malaysia,Malaysia,Asia,Bangi,STEM,MS in Computer Science,MS,159,75,6.0,optional,true,systems,true,6000,14000
+Universiti Sains Malaysia,Malaysia,Asia,Penang,STEM,MS in Computer Science,MS,137,70,6.0,optional,true,systems,true,6000,14000
+Chulalongkorn University,Thailand,Asia,Bangkok,STEM,MS in Computer Science,MS,211,82,6.0,optional,true,systems,true,8000,16000
+Mahidol University,Thailand,Asia,Bangkok,STEM,MS in Computer Science,MS,382,88,6.0,optional,true,systems,true,7000,15000
+Kasetsart University,Thailand,Asia,Bangkok,STEM,MS in Computer Science,MS,801,95,6.0,optional,true,systems,true,6000,14000
+King Mongkut's University,Thailand,Asia,Bangkok,STEM,MS in Computer Science,MS,801,98,6.0,optional,true,systems,true,6000,14000
+Thammasat University,Thailand,Asia,Bangkok,STEM,MS in Information Technology,MS,601,92,6.0,optional,true,systems,true,6000,14000
+University of Indonesia,Indonesia,Asia,Jakarta,STEM,MS in Computer Science,MS,248,85,6.0,optional,true,systems,true,5000,12000
+Bandung Institute of Technology,Indonesia,Asia,Bandung,STEM,MS in Informatics,MS,235,80,6.0,optional,true,systems,true,5000,12000
+Gadjah Mada University,Indonesia,Asia,Yogyakarta,STEM,MS in Computer Science,MS,231,82,6.0,optional,true,systems,true,5000,12000
+University of the Philippines,Philippines,Asia,Quezon City,STEM,MS in Computer Science,MS,412,90,6.0,optional,true,systems,true,6000,13000
+Ateneo de Manila University,Philippines,Asia,Manila,STEM,MS in Information Technology,MS,801,102,6.0,optional,true,systems,true,8000,15000
+Moscow State University,Russia,Asia,Moscow,STEM,MS in Computer Science,MS,74,28,6.5,optional,true,systems+theory,true,6000,18000
+Saint Petersburg State University,Russia,Asia,Saint Petersburg,STEM,MS in Computer Science,MS,225,48,6.5,optional,true,systems,true,5000,16000
+Novosibirsk State University,Russia,Asia,Novosibirsk,STEM,MS in Computer Science,MS,250,55,6.5,optional,true,systems+theory,true,4500,15000
+ITMO University,Russia,Asia,Saint Petersburg,STEM,MS in Computer Science,MS,360,65,6.5,optional,true,systems+ai,true,5000,16000
+Bauman Moscow State Technical,Russia,Asia,Moscow,STEM,MS in Computer Systems,MS,284,60,6.5,optional,true,systems,true,5000,16000
+Higher School of Economics,Russia,Asia,Moscow,STEM,MS in Data Science,MS,298,62,6.5,optional,true,analytics+ml,true,7000,18000
+Tomsk State University,Russia,Asia,Tomsk,STEM,MS in Computer Science,MS,268,58,6.5,optional,true,systems,true,4000,14000
+Ural Federal University,Russia,Asia,Yekaterinburg,STEM,MS in Computer Science,MS,351,68,6.5,optional,true,systems,true,4000,14000
+Kazan Federal University,Russia,Asia,Kazan,STEM,MS in Computer Science,MS,347,67,6.5,optional,true,systems,true,4000,14000
+Southern Federal University,Russia,Asia,Rostov-on-Don,STEM,MS in Informatics,MS,601,75,6.5,optional,true,systems,true,4000,14000
+Vietnam National University Hanoi,Vietnam,Asia,Hanoi,STEM,MS in Computer Science,MS,801,105,6.0,optional,true,systems,true,4000,10000
+Ho Chi Minh City University of Technology,Vietnam,Asia,Ho Chi Minh City,STEM,MS in Computer Science,MS,801,108,6.0,optional,true,systems,true,4000,10000
+Hanoi University of Science and Technology,Vietnam,Asia,Hanoi,STEM,MS in Information Technology,MS,801,110,6.0,optional,true,systems,true,4000,10000
+National Cheng Chi University,Taiwan,Asia,Taipei,MBA,MBA,MBA,601,55,6.5,optional,true,mba,true,15000,28000
+NUS Business School,Singapore,Asia,Singapore,MBA,MBA,MBA,11,18,7.0,optional,true,mba,true,85000,115000
+INSEAD Singapore,Singapore,Asia,Singapore,MBA,MBA,MBA,7,3,7.0,optional,true,mba,true,98000,128000
+China Europe International,China,Asia,Shanghai,MBA,MBA,MBA,701,35,7.0,optional,true,mba,true,55000,75000
+ISB Hyderabad,India,Asia,Hyderabad,MBA,PGP in Management,MBA,801,32,7.0,optional,true,mba+leadership,true,48000,62000
+IIM Ahmedabad,India,Asia,Ahmedabad,MBA,PGP,MBA,801,28,7.0,optional,true,mba,true,25000,35000
+IIM Bangalore,India,Asia,Bangalore,MBA,PGP,MBA,801,30,7.0,optional,true,mba,true,25000,35000
+IIM Calcutta,India,Asia,Kolkata,MBA,PGP,MBA,801,34,7.0,optional,true,mba,true,22000,32000
+HKUST Business School,Hong Kong,Asia,Hong Kong,MBA,MBA,MBA,60,25,7.0,optional,true,mba,true,78000,110000
+Chinese University HK Business,Hong Kong,Asia,Hong Kong,MBA,MBA,MBA,47,38,7.0,optional,true,mba,true,72000,102000
+Waseda Business School,Japan,Asia,Tokyo,MBA,MBA,MBA,199,55,6.5,optional,true,mba,true,42000,68000
+Keio Business School,Japan,Asia,Tokyo,MBA,MBA,MBA,214,58,6.5,optional,true,mba,true,42000,68000
+Korea University Business School,South Korea,Asia,Seoul,MBA,MBA,MBA,79,48,6.5,optional,true,mba,true,28000,48000
+Yonsei School of Business,South Korea,Asia,Seoul,MBA,Global MBA,MBA,76,45,6.5,optional,true,mba,true,28000,48000
+IIM Lucknow,India,Asia,Lucknow,MBA,PGP,MBA,801,42,7.0,optional,true,mba,true,22000,32000
+IIM Kozhikode,India,Asia,Kozhikode,MBA,PGP,MBA,801,45,7.0,optional,true,mba,true,22000,32000
+SP Jain School,India,Asia,Mumbai,MBA,Global MBA,MBA,801,52,6.5,optional,true,mba,true,35000,48000
+XLRI Jamshedpur,India,Asia,Jamshedpur,MBA,PGDM,MBA,801,48,6.5,optional,true,mba+hr,true,22000,32000
+Peking University Guanghua,China,Asia,Beijing,MBA,MBA,MBA,17,22,6.5,optional,true,mba,true,58000,78000
+Tsinghua SEM,China,Asia,Beijing,MBA,MBA,MBA,14,18,6.5,optional,true,mba+tech,true,62000,82000
+Shanghai Advanced Institute,China,Asia,Shanghai,MBA,MBA,MBA,46,32,6.5,optional,true,mba,true,48000,68000
+University of Tokyo,Japan,Asia,Tokyo,Health,MPH,MPH,29,28,6.5,optional,true,public_health,true,18000,32000
+NUS Saw Swee Hock,Singapore,Asia,Singapore,Health,MPH,MPH,11,18,6.5,optional,true,public_health,true,32000,58000
+Chinese University of Hong Kong,Hong Kong,Asia,Hong Kong,Health,MPH,MPH,47,35,6.5,optional,true,public_health,true,28000,52000
+Peking University Health Science,China,Asia,Beijing,Health,MPH,MPH,17,22,6.5,optional,true,public_health,true,12000,26000
+IIT Bombay IDC,India,Asia,Mumbai,Arts,MDes in Interaction Design,MDes,149,15,6.5,optional,true,design+ux,true,3000,9000
+National Institute of Design,India,Asia,Ahmedabad,Arts,MDes in Product Design,MDes,0,22,6.5,optional,true,product_design,true,4000,10000
+Srishti Institute,India,Asia,Bangalore,Arts,MDes in Digital Media,MDes,0,35,6.5,optional,true,digital_media,true,8000,14000
+NUS School of Design,Singapore,Asia,Singapore,Finance,MS in Financial Engineering,MS,11,12,6.5,optional,true,quant+finance,true,48000,78000
+HKUST Finance,Hong Kong,Asia,Hong Kong,Finance,MS in Financial Analysis,MS,60,28,6.5,optional,true,finance,true,42000,72000
+NTU Business,Singapore,Asia,Singapore,MIS,MS in Business Analytics,MIS,26,25,6.5,optional,true,analytics,true,42000,68000
+IIM Bangalore,India,Asia,Bangalore,MIS,Post Graduate Programme in Business Analytics,MIS,801,38,6.5,optional,true,analytics+ml,true,28000,38000
+University of Oxford,UK,Europe,Oxford,STEM,MSc in Computer Science,MS,2,2,7.0,optional,true,theory+systems,true,42000,65000
+University of Cambridge,UK,Europe,Cambridge,STEM,MPhil in Advanced Computer Science,MS,3,3,7.0,optional,true,theory+systems,true,45000,68000
+Imperial College London,UK,Europe,London,STEM,MSc in Computing Security,MS,6,7,7.0,optional,true,systems+security,true,38000,72000
+ETH Zurich,Switzerland,Europe,Zurich,STEM,MS in Cyber Security,MS,7,4,7.0,optional,true,systems+crypto,true,1600,28000
+EPFL,Switzerland,Europe,Lausanne,STEM,MS in Computer Science,MS,16,8,6.5,optional,true,systems+ai,true,1500,26000
+University College London,UK,Europe,London,STEM,MSc in Information Security,MS,9,12,7.0,optional,true,security+network,true,35000,68000
+University of Edinburgh,UK,Europe,Edinburgh,STEM,MSc in Computer Science,MS,15,15,6.5,optional,true,systems+ai,true,32000,58000
+King's College London,UK,Europe,London,STEM,MSc in Cyber Security,MS,35,22,6.5,optional,true,security,true,32000,65000
+University of Manchester,UK,Europe,Manchester,STEM,MSc in Computer Science,MS,28,18,6.5,optional,true,systems,true,28000,52000
+London School of Economics,UK,Europe,London,STEM,MSc in Data Science,MS,45,35,7.0,optional,true,analytics,true,35000,68000
+Technical University of Munich,Germany,Europe,Munich,STEM,MS in Informatics,MS,37,20,6.5,optional,true,systems+ai,true,0,22000
+RWTH Aachen,Germany,Europe,Aachen,STEM,MSc in Computer Science,MS,106,40,6.5,optional,true,systems+embedded,true,0,20000
+KIT Karlsruhe,Germany,Europe,Karlsruhe,STEM,MSc in Computer Science,MS,141,45,6.5,optional,true,systems,true,0,20000
+TU Berlin,Germany,Europe,Berlin,STEM,MSc in Computer Science,MS,148,48,6.5,optional,true,systems,true,0,20000
+University of Stuttgart,Germany,Europe,Stuttgart,STEM,MSc in Computer Science,MS,312,55,6.5,optional,true,systems,true,0,18000
+TU Darmstadt,Germany,Europe,Darmstadt,STEM,MSc in IT Security,MS,246,52,6.5,optional,true,security+crypto,true,0,20000
+LMU Munich,Germany,Europe,Munich,STEM,MSc in Computer Science,MS,59,38,6.5,optional,true,systems,true,0,22000
+University of Bonn,Germany,Europe,Bonn,STEM,MSc in Computer Science,MS,226,58,6.5,optional,true,systems,true,0,18000
+Saarland University,Germany,Europe,Saarbrucken,STEM,MSc in Computer Science,MS,315,62,6.5,optional,true,systems,true,0,18000
+TU Dresden,Germany,Europe,Dresden,STEM,MSc in Computational Logic,MS,194,60,6.5,optional,true,theory+systems,true,0,18000
+Humboldt University Berlin,Germany,Europe,Berlin,STEM,MSc in Computer Science,MS,120,50,6.5,optional,true,systems,true,0,20000
+University of Freiburg,Germany,Europe,Freiburg,STEM,MSc in Computer Science,MS,172,56,6.5,optional,true,systems+ai,true,0,18000
+TU Kaiserslautern,Germany,Europe,Kaiserslautern,STEM,MSc in Computer Science,MS,601,70,6.5,optional,true,systems,true,0,18000
+University of Mannheim,Germany,Europe,Mannheim,STEM,MSc in Data Science,MS,303,65,6.5,optional,true,analytics,true,0,18000
+University of Hamburg,Germany,Europe,Hamburg,STEM,MSc in Computer Science,MS,228,64,6.5,optional,true,systems,true,0,18000
+Delft University of Technology,Netherlands,Europe,Delft,STEM,MSc in Computer Science,MS,54,28,6.5,optional,true,systems+security,true,18000,32000
+University of Amsterdam,Netherlands,Europe,Amsterdam,STEM,MSc in Computer Science,MS,53,32,6.5,optional,true,systems+ai,true,16000,30000
+Eindhoven University of Technology,Netherlands,Europe,Eindhoven,STEM,MSc in Computer Science,MS,125,42,6.5,optional,true,systems+security,true,16000,28000
+Utrecht University,Netherlands,Europe,Utrecht,STEM,MSc in Computing Science,MS,112,50,6.5,optional,true,systems,true,14000,28000
+University of Groningen,Netherlands,Europe,Groningen,STEM,MSc in Computing Science,MS,145,54,6.5,optional,true,systems,true,14000,28000
+Leiden University,Netherlands,Europe,Leiden,STEM,MSc in Computer Science,MS,126,52,6.5,optional,true,systems,true,14000,28000
+Radboud University,Netherlands,Europe,Nijmegen,STEM,MSc in Computing Science,MS,214,58,6.5,optional,true,systems,true,14000,28000
+VU Amsterdam,Netherlands,Europe,Amsterdam,STEM,MSc in Computer Science,MS,207,56,6.5,optional,true,systems,true,14000,28000
+KU Leuven,Belgium,Europe,Leuven,STEM,MSc in Computer Science,MS,76,36,6.5,optional,true,systems+security,true,1200,18000
+Ghent University,Belgium,Europe,Ghent,STEM,MSc in Computer Science,MS,138,46,6.5,optional,true,systems,true,1000,16000
+Université Libre de Bruxelles,Belgium,Europe,Brussels,STEM,MSc in Computer Science,MS,207,54,6.5,optional,true,systems,true,1000,16000
+Politecnico di Milano,Italy,Europe,Milan,STEM,MSc in Computer Science,MS,123,46,6.5,optional,true,systems,true,3500,22000
+Sapienza University Rome,Italy,Europe,Rome,STEM,MSc in Cybersecurity,MS,134,56,6.5,optional,true,security,true,3200,20000
+University of Bologna,Italy,Europe,Bologna,STEM,MSc in Computer Science,MS,167,60,6.5,optional,true,systems,true,3200,20000
+Polytechnic University Turin,Italy,Europe,Turin,STEM,MSc in Computer Engineering,MS,308,66,6.5,optional,true,systems,true,3500,20000
+University of Padua,Italy,Europe,Padua,STEM,MSc in Computer Science,MS,243,64,6.5,optional,true,systems,true,3000,19000
+University of Pisa,Italy,Europe,Pisa,STEM,MSc in Computer Science,MS,388,72,6.5,optional,true,systems,true,3000,19000
+University of Milan,Italy,Europe,Milan,STEM,MSc in Computer Science,MS,316,68,6.5,optional,true,systems,true,3200,20000
+KTH Royal Institute,Sweden,Europe,Stockholm,STEM,MSc in Computer Science,MS,89,44,6.5,optional,true,systems+security,true,0,18000
+Chalmers University,Sweden,Europe,Gothenburg,STEM,MSc in Computer Science,MS,125,54,6.5,optional,true,systems,true,0,18000
+Lund University,Sweden,Europe,Lund,STEM,MSc in Computer Science,MS,85,48,6.5,optional,true,systems,true,0,18000
+Uppsala University,Sweden,Europe,Uppsala,STEM,MSc in Computer Science,MS,112,52,6.5,optional,true,systems,true,0,18000
+Stockholm University,Sweden,Europe,Stockholm,STEM,MSc in Computer Science,MS,148,56,6.5,optional,true,systems,true,0,18000
+DTU Denmark,Denmark,Europe,Copenhagen,STEM,MSc in Computer Science,MS,104,48,6.5,optional,true,systems,true,0,20000
+University of Copenhagen,Denmark,Europe,Copenhagen,STEM,MSc in Computer Science,MS,82,42,6.5,optional,true,systems,true,0,20000
+Aarhus University,Denmark,Europe,Aarhus,STEM,MSc in Computer Science,MS,139,50,6.5,optional,true,systems,true,0,20000
+Norwegian University of Science,Norway,Europe,Trondheim,STEM,MSc in Computer Science,MS,363,65,6.5,optional,true,systems,true,0,18000
+University of Oslo,Norway,Europe,Oslo,STEM,MSc in Informatics,MS,117,54,6.5,optional,true,systems,true,0,18000
+Aalto University,Finland,Europe,Espoo,STEM,MSc in Computer Science,MS,116,52,6.5,optional,true,systems+security,true,0,16000
+University of Helsinki,Finland,Europe,Helsinki,STEM,MSc in Computer Science,MS,104,50,6.5,optional,true,systems,true,0,16000
+University of Turku,Finland,Europe,Turku,STEM,MSc in Computer Science,MS,295,62,6.5,optional,true,systems,true,0,16000
+Trinity College Dublin,Ireland,Europe,Dublin,STEM,MSc in Computer Science,MS,98,46,6.5,optional,true,systems,true,18000,32000
+University College Dublin,Ireland,Europe,Dublin,STEM,MSc in Computer Science,MS,171,58,6.5,optional,true,systems,true,16000,30000
+Sorbonne University,France,Europe,Paris,STEM,MSc in Computer Science,MS,60,40,6.5,optional,true,systems,true,4000,22000
+ENS Paris,France,Europe,Paris,STEM,Master in Computer Science,MS,45,25,6.5,optional,true,theory+systems,true,3000,20000
+Telecom Paris,France,Europe,Paris,STEM,MSc in Cybersecurity,MS,242,58,6.5,optional,true,security+network,true,12000,28000
+CentraleSupelec,France,Europe,Paris,STEM,MSc in Computer Science,MS,138,54,6.5,optional,true,systems,true,8000,24000
+Grenoble INP,France,Europe,Grenoble,STEM,MSc in Cybersecurity,MS,314,68,6.5,optional,true,security,true,4000,20000
+Université Paris-Saclay,France,Europe,Paris,STEM,MSc in Computer Science,MS,69,44,6.5,optional,true,systems+ai,true,4000,22000
+IMT Atlantique,France,Europe,Nantes,STEM,MSc in Computer Science,MS,551,75,6.5,optional,true,systems,true,6000,22000
+Universidad Politecnica Madrid,Spain,Europe,Madrid,STEM,MSc in Cybersecurity,MS,215,62,6.5,optional,true,security,true,2500,18000
+Barcelona Tech,Spain,Europe,Barcelona,STEM,MSc in Informatics,MS,343,70,6.5,optional,true,systems,true,2800,18000
+Autonomous University Madrid,Spain,Europe,Madrid,STEM,MSc in Computer Science,MS,207,64,6.5,optional,true,systems,true,2500,18000
+University of Barcelona,Spain,Europe,Barcelona,STEM,MSc in Computer Science,MS,184,60,6.5,optional,true,systems,true,2500,18000
+Carlos III University Madrid,Spain,Europe,Madrid,STEM,MSc in Computer Science,MS,311,68,6.5,optional,true,systems,true,2500,18000
+Charles University,Czech Republic,Europe,Prague,STEM,MSc in Computer Science,MS,248,72,6.5,optional,true,systems,true,4500,16000
+Czech Technical University,Czech Republic,Europe,Prague,STEM,MSc in Computer Science,MS,701,82,6.5,optional,true,systems,true,4000,15000
+Warsaw University of Technology,Poland,Europe,Warsaw,STEM,MSc in Computer Science,MS,501,78,6.5,optional,true,systems,true,3500,15000
+AGH Krakow,Poland,Europe,Krakow,STEM,MSc in Computer Science,MS,651,82,6.5,optional,true,systems,true,3000,14000
+University of Warsaw,Poland,Europe,Warsaw,STEM,MSc in Computer Science,MS,321,76,6.5,optional,true,systems,true,3000,14000
+Jagiellonian University,Poland,Europe,Krakow,STEM,MSc in Computer Science,MS,317,74,6.5,optional,true,systems,true,3000,14000
+University of Bristol,UK,Europe,Bristol,STEM,MSc in Computer Science,MS,55,30,6.5,optional,true,systems,true,30000,58000
+University of Warwick,UK,Europe,Coventry,STEM,MSc in Computer Science,MS,67,34,6.5,optional,true,systems,true,28000,55000
+University of Glasgow,UK,Europe,Glasgow,STEM,MSc in Computer Science,MS,76,38,6.5,optional,true,systems,true,26000,50000
+University of Southampton,UK,Europe,Southampton,STEM,MSc in Cyber Security,MS,81,40,6.5,optional,true,security,true,26000,52000
+Queen Mary University London,UK,Europe,London,STEM,MSc in Computer Science,MS,117,44,6.5,optional,true,systems,true,28000,62000
+INSEAD,France,Europe,Fontainebleau,MBA,MBA,MBA,7,3,7.0,optional,true,mba,true,98000,120000
+London Business School,UK,Europe,London,MBA,MBA,MBA,45,5,7.0,optional,true,mba+finance,true,105000,142000
+HEC Paris,France,Europe,Paris,MBA,MBA,MBA,26,9,7.0,optional,true,mba+strategy,true,92000,118000
+IE Business School,Spain,Europe,Madrid,MBA,MBA,MBA,207,20,7.0,optional,true,mba,true,78000,98000
+ESADE Barcelona,Spain,Europe,Barcelona,MBA,MBA,MBA,244,24,7.0,optional,true,mba,true,75000,95000
+IESE Barcelona,Spain,Europe,Barcelona,MBA,MBA,MBA,207,22,7.0,optional,true,mba,true,85000,108000
+Oxford Said,UK,Europe,Oxford,MBA,MBA,MBA,2,8,7.0,optional,true,mba,true,88000,118000
+Cambridge Judge,UK,Europe,Cambridge,MBA,MBA,MBA,3,12,7.0,optional,true,mba,true,85000,115000
+Imperial College Business School,UK,Europe,London,MBA,MBA,MBA,6,15,7.0,optional,true,mba+innovation,true,82000,118000
+Warwick Business School,UK,Europe,Coventry,MBA,MBA,MBA,67,28,7.0,optional,true,mba,true,68000,92000
+Manchester Business School,UK,Europe,Manchester,MBA,MBA,MBA,28,30,7.0,optional,true,mba,true,65000,88000
+Rotterdam School of Management,Netherlands,Europe,Rotterdam,MBA,MBA,MBA,69,26,7.0,optional,true,mba,true,70000,95000
+ESMT Berlin,Germany,Europe,Berlin,MBA,MBA,MBA,601,40,7.0,optional,true,mba+tech,true,72000,92000
+WHU Otto Beisheim,Germany,Europe,Vallendar,MBA,MBA,MBA,601,42,7.0,optional,true,mba,true,68000,88000
+Mannheim Business School,Germany,Europe,Mannheim,MBA,MBA,MBA,303,45,7.0,optional,true,mba,true,52000,72000
+Imperial College London,UK,Europe,London,Health,MSc in Public Health,MPH,6,12,7.0,optional,true,public_health,true,32000,68000
+London School of Hygiene,UK,Europe,London,Health,MSc in Public Health,MPH,19,8,7.0,optional,true,public_health+policy,true,28000,62000
+Karolinska Institute,Sweden,Europe,Stockholm,Health,MSc in Public Health,MPH,38,15,6.5,optional,true,public_health,true,0,18000
+Royal College of Art,UK,Europe,London,Arts,MA in Design,MA,1,1,6.5,optional,true,design+innovation,true,32000,68000
+Central Saint Martins,UK,Europe,London,Arts,MA in Graphic Design,MA,2,5,6.5,optional,true,design+fashion,true,28000,65000
+University of the Arts London,UK,Europe,London,Arts,MA in Digital Media,MA,2,8,6.5,optional,true,digital_media,true,26000,62000
+Aalto University School of Arts,Finland,Europe,Espoo,Arts,MA in Visual Communication,MA,116,15,6.5,optional,true,design+visual,true,0,16000
+Design Academy Eindhoven,Netherlands,Europe,Eindhoven,Arts,MA in Design,MA,0,18,6.5,optional,true,product_design,true,16000,30000
+London School of Economics,UK,Europe,London,Finance,MSc in Finance,MS,45,18,7.0,optional,true,finance+economics,true,42000,78000
+HEC Paris,France,Europe,Paris,Finance,MSc in International Finance,MS,26,22,7.0,optional,true,finance,true,38000,65000
+ESCP Business School,Europe,Europe,Paris,Finance,MSc in Finance,MS,601,35,7.0,optional,true,finance,true,32000,58000
+Imperial College London,UK,Europe,London,MIS,MSc in Business Analytics,MIS,6,15,7.0,optional,true,analytics,true,38000,72000
+Warwick Business School,UK,Europe,Coventry,MIS,MSc in Business Analytics,MIS,67,28,6.5,optional,true,analytics,true,32000,62000
+University of Melbourne,Australia,Australia,Melbourne,STEM,Master of Information Technology,MS,33,16,6.5,optional,true,systems+network,true,34000,60000
+Australian National University,Australia,Australia,Canberra,STEM,Master of Computing,MS,30,18,6.5,optional,true,systems+ai,true,38000,62000
+University of Sydney,Australia,Australia,Sydney,STEM,Master of Information Technology,MS,41,22,6.5,optional,true,systems+network,true,38000,65000
+University of New South Wales,Australia,Australia,Sydney,STEM,Master of Information Technology,MS,43,20,6.5,optional,true,systems+security,true,36000,62000
+Monash University,Australia,Australia,Melbourne,STEM,Master of Cybersecurity,MS,42,24,6.5,optional,true,security+network,true,35000,58000
+University of Queensland,Australia,Australia,Brisbane,STEM,Master of Computer Science,MS,50,26,6.5,optional,true,systems,true,32000,55000
+University of Adelaide,Australia,Australia,Adelaide,STEM,Master of Computer Science,MS,106,35,6.5,optional,true,systems,true,30000,52000
+University of Western Australia,Australia,Australia,Perth,STEM,Master of Information Technology,MS,72,32,6.5,optional,true,systems,true,32000,54000
+Queensland University of Technology,Australia,Australia,Brisbane,STEM,Master of Information Technology,MS,189,42,6.5,optional,true,systems+security,true,28000,50000
+RMIT University,Australia,Australia,Melbourne,STEM,Master of Cyber Security,MS,190,45,6.5,optional,true,security,true,30000,52000
+University of Technology Sydney,Australia,Australia,Sydney,STEM,Master of Information Technology,MS,133,38,6.5,optional,true,systems+network,true,32000,56000
+Macquarie University,Australia,Australia,Sydney,STEM,Master of Information Technology,MS,195,48,6.5,optional,true,systems,true,30000,52000
+Curtin University,Australia,Australia,Perth,STEM,Master of Cyber Security,MS,193,50,6.5,optional,true,security,true,28000,48000
+Deakin University,Australia,Australia,Melbourne,STEM,Master of Cyber Security,MS,266,55,6.5,optional,true,security,true,28000,48000
+Griffith University,Australia,Australia,Brisbane,STEM,Master of Information Technology,MS,290,58,6.5,optional,true,systems,true,26000,46000
+University of Wollongong,Australia,Australia,Wollongong,STEM,Master of Computer Science,MS,185,52,6.5,optional,true,systems,true,28000,48000
+La Trobe University,Australia,Australia,Melbourne,STEM,Master of Cybersecurity,MS,316,62,6.5,optional,true,security,true,26000,45000
+University of South Australia,Australia,Australia,Adelaide,STEM,Master of Data Science,MS,295,60,6.5,optional,true,analytics,true,26000,44000
+University of Newcastle,Australia,Australia,Newcastle,STEM,Master of Information Technology,MS,197,54,6.5,optional,true,systems,true,26000,44000
+Swinburne University,Australia,Australia,Melbourne,STEM,Master of Information Technology,MS,285,56,6.5,optional,true,systems,true,28000,48000
+Victoria University,Australia,Australia,Melbourne,STEM,Master of Cyber Security,MS,601,68,6.5,optional,true,security,true,24000,42000
+Flinders University,Australia,Australia,Adelaide,STEM,Master of Information Technology,MS,407,65,6.5,optional,true,systems,true,26000,44000
+Western Sydney University,Australia,Australia,Sydney,STEM,Master of Information Technology,MS,474,70,6.5,optional,true,systems,true,24000,42000
+Melbourne Business School,Australia,Australia,Melbourne,MBA,MBA,MBA,33,40,7.0,optional,true,mba,true,88000,118000
+Australian GSM UNSW,Australia,Australia,Sydney,MBA,MBA,MBA,43,45,7.0,optional,true,mba,true,82000,112000
+Macquarie Graduate School,Australia,Australia,Sydney,MBA,MBA,MBA,195,65,7.0,optional,true,mba,true,65000,88000
+King Fahd University,Saudi Arabia,MiddleEast,Dhahran,STEM,MS in Computer Science,MS,186,55,6.5,optional,true,systems+security,true,0,15000
+King Abdullah University,Saudi Arabia,MiddleEast,Thuwal,STEM,MS in Computer Science,MS,101,42,6.5,optional,true,systems+research,true,0,18000
+Khalifa University,UAE,MiddleEast,Abu Dhabi,STEM,MSc in Computer Science,MS,183,52,6.5,optional,true,systems+security,true,35000,58000
+United Arab Emirates University,UAE,MiddleEast,Al Ain,STEM,MSc in Computer Science,MS,364,68,6.5,optional,true,systems,true,28000,48000
+American University of Sharjah,UAE,MiddleEast,Sharjah,STEM,MSc in Computer Science,MS,431,75,6.5,optional,true,systems,true,32000,52000
+University of Dubai,UAE,MiddleEast,Dubai,STEM,MSc in Information Security,MS,651,85,6.5,optional,true,security,true,28000,46000
+Qatar University,Qatar,MiddleEast,Doha,STEM,MS in Computing,MS,245,62,6.5,optional,true,systems,true,0,22000
+American University Beirut,Lebanon,MiddleEast,Beirut,STEM,MS in Computer Science,MS,226,58,6.5,optional,true,systems,true,18000,32000
+Jordan University Science Tech,Jordan,MiddleEast,Irbid,STEM,MS in Computer Science,MS,651,88,6.5,optional,true,systems,true,8000,18000
+King Saud University,Saudi Arabia,MiddleEast,Riyadh,STEM,MS in Computer Science,MS,292,65,6.5,optional,true,systems,true,0,15000
+Princess Sumaya University,Jordan,MiddleEast,Amman,STEM,MS in Computer Science,MS,801,95,6.5,optional,true,systems+security,true,10000,20000
+Sabanci University,Turkey,MiddleEast,Istanbul,STEM,MS in Computer Science,MS,465,78,6.5,optional,true,systems,true,18000,32000
+Koc University,Turkey,MiddleEast,Istanbul,STEM,MS in Computer Science,MS,511,82,6.5,optional,true,systems,true,22000,38000
+Bilkent University,Turkey,MiddleEast,Ankara,STEM,MS in Computer Science,MS,426,76,6.5,optional,true,systems,true,15000,28000
+Middle East Technical University,Turkey,MiddleEast,Ankara,STEM,MS in Computer Engineering,MS,511,80,6.5,optional,true,systems,true,8000,20000
+Bogazici University,Turkey,MiddleEast,Istanbul,STEM,MS in Computer Engineering,MS,538,84,6.5,optional,true,systems,true,6000,18000
+Istanbul Technical University,Turkey,MiddleEast,Istanbul,STEM,MS in Computer Engineering,MS,701,92,6.5,optional,true,systems,true,5000,16000
+University of Tehran,Iran,MiddleEast,Tehran,STEM,MSc in Computer Science,MS,601,90,6.5,optional,true,systems,true,4000,12000
+Sharif University of Technology,Iran,MiddleEast,Tehran,STEM,MSc in Computer Engineering,MS,432,72,6.5,optional,true,systems+theory,true,4000,12000
+Cairo University,Egypt,MiddleEast,Cairo,STEM,MSc in Computer Science,MS,651,95,6.5,optional,true,systems,true,5000,14000
+American University Cairo,Egypt,MiddleEast,Cairo,STEM,MSc in Computing,MS,395,74,6.5,optional,true,systems,true,22000,36000
+Ain Shams University,Egypt,MiddleEast,Cairo,STEM,MSc in Computer Science,MS,801,102,6.5,optional,true,systems,true,4000,12000
+Alexandria University,Egypt,MiddleEast,Alexandria,STEM,MSc in Computer Science,MS,801,105,6.5,optional,true,systems,true,4000,12000
+King Abdulaziz University,Saudi Arabia,MiddleEast,Jeddah,STEM,MS in Computer Science,MS,143,62,6.5,optional,true,systems,true,0,15000
+Taibah University,Saudi Arabia,MiddleEast,Medina,STEM,MS in Computer Science,MS,801,110,6.5,optional,true,systems,true,0,14000
+Sultan Qaboos University,Oman,MiddleEast,Muscat,STEM,MSc in Computer Science,MS,379,80,6.5,optional,true,systems,true,12000,24000
+Kuwait University,Kuwait,MiddleEast,Kuwait City,STEM,MSc in Computer Science,MS,801,112,6.5,optional,true,systems,true,0,18000
+University of Bahrain,Bahrain,MiddleEast,Manama,STEM,MSc in Computer Science,MS,801,115,6.5,optional,true,systems,true,8000,18000
+INSEAD Abu Dhabi,UAE,MiddleEast,Abu Dhabi,MBA,MBA,MBA,7,3,7.0,optional,true,mba,true,98000,120000
+Dubai Business School,UAE,MiddleEast,Dubai,MBA,Executive MBA,MBA,651,75,7.0,optional,true,mba,true,65000,85000
+American University Beirut,Lebanon,MiddleEast,Beirut,MBA,MBA,MBA,226,68,7.0,optional,true,mba,true,42000,58000

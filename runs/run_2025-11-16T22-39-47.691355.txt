@@ -1,0 +1,19 @@
+MODE: PREDICT
+COURSE_TYPE: STEM
+REGIONS: [USA, EUROPE]
+TOTAL_PLANNED: 15
+AMBITIOUS_(REACH_SCHOOLS),1,Massachusetts Institute of Technology,USA,MS in EECS,7.0,Opt,85000,1,global rank 1|subject rank 1|active research lab
+AMBITIOUS_(REACH_SCHOOLS),2,University of Oxford,UK,MSc in Computer Science,7.0,Opt,65000,2,global rank 2|subject rank 2|active research lab
+AMBITIOUS_(REACH_SCHOOLS),3,Stanford University,USA,MS in Computer Science,7.0,Opt,86000,3,global rank 3|subject rank 2|active research lab
+TARGET_(BALANCED_FIT),1,University of Cambridge,UK,MPhil in Advanced Computer Science,7.0,Opt,68000,4,global rank 3|subject rank 3|active research lab
+TARGET_(BALANCED_FIT),2,UC Berkeley,USA,MS in EECS,7.0,Opt,82000,5,global rank 4|subject rank 3|active research lab
+TARGET_(BALANCED_FIT),3,ETH Zurich,Switzerland,MS in Cyber Security,7.0,Opt,28000,6,global rank 7|subject rank 4|active research lab
+TARGET_(BALANCED_FIT),4,Princeton University,USA,MS in Computer Science,7.0,Opt,85000,7,global rank 6|subject rank 6|active research lab
+TARGET_(BALANCED_FIT),5,Imperial College London,UK,MSc in Computing Security,7.0,Opt,72000,8,global rank 6|subject rank 7|active research lab
+TARGET_(BALANCED_FIT),6,Cornell University,USA,MEng in Computer Science,7.0,Opt,82000,9,global rank 12|subject rank 7|active research lab
+TARGET_(BALANCED_FIT),7,University College London,UK,MSc in Information Security,7.0,Opt,68000,10,global rank 9|subject rank 12|active research lab
+TARGET_(BALANCED_FIT),8,EPFL,Switzerland,MS in Computer Science,6.5,Opt,26000,11,global rank 16|subject rank 8|active research lab
+TARGET_(BALANCED_FIT),9,Yale University,USA,MS in Computer Science,7.0,Opt,82000,12,global rank 9|subject rank 22|active research lab
+SAFE_(HIGH_ADMIT_ODDS),1,University of Edinburgh,UK,MSc in Computer Science,6.5,Opt,58000,13,global rank 15|subject rank 15|active research lab
+SAFE_(HIGH_ADMIT_ODDS),2,Carnegie Mellon University,USA,MS in Information Security,7.0,Opt,88000,14,global rank 28|subject rank 5|active research lab
+SAFE_(HIGH_ADMIT_ODDS),3,University of Pennsylvania,USA,MSE in Computer Science,7.0,Opt,88000,15,global rank 13|subject rank 20|active research lab
