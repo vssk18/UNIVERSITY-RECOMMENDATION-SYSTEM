@@ -2,19 +2,21 @@
 .DS_Store
 
 # Java build output
-out/
+/out/
+*.class
 
-# Python venvs (if any)
+# Python
+__pycache__/
+*.pyc
 .venv/
 
-# Run logs (keep directory but ignore generated logs)
-runs/run_*.txt
-
-# C++ compiled binaries
+# C++ binaries
 tools/cpp_summary/summary
-tools/cpp_summary/*.exe
 
-# VSCode / IDE configs (just in case)
+# Logs and run artifacts
+runs/*.txt
+
+# VSCode / IDE
 .vscode/
 .idea/
 *.iml
