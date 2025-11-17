@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Java build output
+out/
+
+# Python venvs (if any)
+.venv/
+
+# Run logs (keep directory but ignore generated logs)
+runs/run_*.txt
+
+# C++ compiled binaries
+tools/cpp_summary/summary
+tools/cpp_summary/*.exe
+
+# VSCode / IDE configs (just in case)
+.vscode/
+.idea/
+*.iml
