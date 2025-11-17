@@ -1,7 +1,5 @@
 package logic;
 
-import model.CourseType;
-import model.Region;
 import model.University;
 
 import java.time.LocalDateTime;
@@ -10,261 +8,408 @@ import java.util.stream.Collectors;
 
 public class RecommendationEngine {
 
+    // ------------ Enums ------------
+
     public enum Mode {
         PREDICT,
         VIEW_ALL
     }
 
-    // ---------------- PROFILE ----------------
-
-    public static class EligibilityProfile {
-        public final CourseType courseType;
-        public final Set<Region> regions;
-        public final Mode mode;
-
-        public final double cgpa10;
-        public final double ielts;
-        public final boolean hasGre;
-        public final int greQuant;
-        public final int greVerbal;
-        public final int yearsExperience;
-        public final int researchPapers;
-        public final double budgetUsd;      // currently only logged, not enforced
-        public final int desiredTotal;      // only used in PREDICT mode
-
-        public EligibilityProfile(
-                CourseType courseType,
-                Set<Region> regions,
-                Mode mode,
-                double cgpa10,
-                double ielts,
-                boolean hasGre,
-                int greQuant,
-                int greVerbal,
-                int yearsExperience,
-                int researchPapers,
-                double budgetUsd,
-                int desiredTotal
-        ) {
-            this.courseType = courseType;
-            this.regions = regions;
-            this.mode = mode;
-            this.cgpa10 = cgpa10;
-            this.ielts = ielts;
-            this.hasGre = hasGre;
-            this.greQuant = greQuant;
-            this.greVerbal = greVerbal;
-            this.yearsExperience = yearsExperience;
-            this.researchPapers = researchPapers;
-            this.budgetUsd = budgetUsd;
-            this.desiredTotal = desiredTotal;
-        }
+    public enum ProfileTier {
+        EXCEPTIONAL,
+        VERY_STRONG,
+        STRONG,
+        GOOD,
+        DEVELOPING,
+        BASIC
     }
 
-    // ---------------- RESULT ----------------
+    public enum Bucket {
+        AMBITIOUS,
+        TARGET,
+        SAFE
+    }
 
-    public static class ScoredUniversity {
+    // ------------ Helper types ------------
+
+    public static final class ScoredUniversity {
         public final University uni;
-        public final double score;
+        public final double fitScore;
+        public final Bucket bucket;
         public final List<String> reasons;
 
-        public ScoredUniversity(University uni, double score, List<String> reasons) {
+        public ScoredUniversity(University uni, double fitScore, Bucket bucket, List<String> reasons) {
             this.uni = uni;
-            this.score = score;
+            this.fitScore = fitScore;
+            this.bucket = bucket;
             this.reasons = reasons;
         }
     }
 
-    public static class Result {
+    public static final class Result {
+        public final Mode mode;
+        public final double profileScore;        // 0–100
+        public final ProfileTier tier;
+        public final int totalUniversities;
+        public final int excludedByIelts;
         public final List<ScoredUniversity> ambitious;
         public final List<ScoredUniversity> target;
         public final List<ScoredUniversity> safe;
-        public final List<String> globalWarnings;
-        public final String profileLabel;
         public final LocalDateTime generatedAt;
 
-        public Result(List<ScoredUniversity> ambitious,
+        public Result(Mode mode,
+                      double profileScore,
+                      ProfileTier tier,
+                      int totalUniversities,
+                      int excludedByIelts,
+                      List<ScoredUniversity> ambitious,
                       List<ScoredUniversity> target,
                       List<ScoredUniversity> safe,
-                      List<String> globalWarnings,
-                      String profileLabel,
                       LocalDateTime generatedAt) {
+            this.mode = mode;
+            this.profileScore = profileScore;
+            this.tier = tier;
+            this.totalUniversities = totalUniversities;
+            this.excludedByIelts = excludedByIelts;
             this.ambitious = ambitious;
             this.target = target;
             this.safe = safe;
-            this.globalWarnings = globalWarnings;
-            this.profileLabel = profileLabel;
             this.generatedAt = generatedAt;
         }
     }
 
-    // ---------------- MAIN ENTRY ----------------
+    // Comparator used everywhere for ordering within a bucket
+    private static final Comparator<ScoredUniversity> BY_RANK_THEN_NAME =
+            Comparator.comparingInt((ScoredUniversity s) -> safeGlobalRank(s.uni))
+                      .thenComparing(s -> s.uni.getName());
 
-    public Result recommend(List<University> all, EligibilityProfile p) {
-        LocalDateTime now = LocalDateTime.now();
+    // ------------ Public entry point ------------
 
-        // 1. Filter by course type, region, IELTS, on-campus
-        List<University> filtered = all.stream()
-                .filter(u -> u.getCourseType() == p.courseType)
-                .filter(u -> p.regions.contains(u.getRegion()))
-                .filter(u -> p.ielts >= u.getIeltsMin())
-                .filter(University::isOnCampus)
+    public static Result recommend(List<University> all,
+                                   EligibilityProfile profile,
+                                   Mode mode,
+                                   int desiredCount) {
+
+        // 1) Compute profile strength
+        double profileScore = profile.computeProfileScore();
+        ProfileTier tier = classifyTier(profileScore);
+
+        // 2) Filter by course type + region
+        List<University> matching = all.stream()
+                .filter(u -> u.getCourseType() == profile.getCourseType())
+                .filter(u -> profile.getRegions().contains(u.getRegion()))
                 .collect(Collectors.toList());
 
-        // 2. Score each university relative to profile
-        double profileStrength = computeProfileStrength(p);
-        String profileLabel = labelProfileStrength(profileStrength);
+        int total = matching.size();
 
-        List<ScoredUniversity> scored = new ArrayList<>();
-        for (University u : filtered) {
-            List<String> reasons = new ArrayList<>();
+        // 3) IELTS + budget filtering (hard constraints), track IELTS exclusions
+        List<University> eligible = new ArrayList<>();
+        int excludedByIelts = 0;
 
-            int globalRank = u.getGlobalRank(); // assume 0 if unknown
-            if (globalRank > 0) {
-                reasons.add("global rank " + globalRank);
-            }
-
-            if (u.isGreRequired()) {
-                reasons.add("GRE required");
-            } else {
-                reasons.add("GRE optional");
-            }
-
-            if (u.hasResearchLab()) {
-                reasons.add("active research lab");
-            }
-
-            double uniDifficulty = estimateDifficultyFromRank(globalRank);
-            double gap = profileStrength - uniDifficulty;
-            double finalScore = gap; // higher = safer
-
-            scored.add(new ScoredUniversity(u, finalScore, reasons));
-        }
-
-        // 3. Sort by difficulty (hardest first) using score, then global rank
-        scored.sort(Comparator
-                .comparingDouble((ScoredUniversity s) -> s.score)
-                .thenComparingInt(s -> s.uni.getGlobalRank()));
-
-        // 4. Bucket into Ambitious / Target / Safe with HARD constraints
-        List<ScoredUniversity> amb = new ArrayList<>();
-        List<ScoredUniversity> tar = new ArrayList<>();
-        List<ScoredUniversity> saf = new ArrayList<>();
-
-        for (ScoredUniversity s : scored) {
-            University u = s.uni;
-            int r = u.getGlobalRank();
-
-            // Hard rule 1: Top-10 globally are ALWAYS Ambitious.
-            if (r > 0 && r <= 10) {
-                amb.add(s);
+        for (University u : matching) {
+            double minIelts = u.getMinIelts();
+            // Strict IELTS filter: if user < program minimum -> excluded
+            if (profile.getIeltsOverall() + 1e-9 < minIelts) {
+                excludedByIelts++;
                 continue;
             }
+            // Budget filter (0 = no limit)
+            if (profile.getBudgetUsd() > 0 && u.getEstimatedTotalUsd() > profile.getBudgetUsd()) {
+                continue;
+            }
+            eligible.add(u);
+        }
 
-            // Hard rule 2: Top-30 globally are NEVER Safe.
-            if (r > 0 && r <= 30) {
-                if (s.score >= 0.5) {
-                    tar.add(s);
-                } else {
-                    amb.add(s);
+        if (eligible.isEmpty()) {
+            // No matches after hard filters
+            return new Result(
+                    mode,
+                    profileScore,
+                    tier,
+                    total,
+                    excludedByIelts,
+                    Collections.emptyList(),
+                    Collections.emptyList(),
+                    Collections.emptyList(),
+                    LocalDateTime.now()
+            );
+        }
+
+        // 4) Bucket each eligible university (Ambitious / Target / Safe)
+        List<ScoredUniversity> ambitious = new ArrayList<>();
+        List<ScoredUniversity> target = new ArrayList<>();
+        List<ScoredUniversity> safe = new ArrayList<>();
+
+        for (University u : eligible) {
+            Bucket bucket = classifyBucket(u, tier);
+            double fit = computeFitScore(u, profile);
+            List<String> reasons = buildReasons(u, bucket);
+            ScoredUniversity s = new ScoredUniversity(u, fit, bucket, reasons);
+            switch (bucket) {
+                case AMBITIOUS -> ambitious.add(s);
+                case TARGET -> target.add(s);
+                case SAFE -> safe.add(s);
+            }
+        }
+
+        // 5) Sort within each bucket by global rank, then name
+        ambitious.sort(BY_RANK_THEN_NAME);
+        target.sort(BY_RANK_THEN_NAME);
+        safe.sort(BY_RANK_THEN_NAME);
+
+        // VIEW_ALL mode: return everything
+        if (mode == Mode.VIEW_ALL) {
+            return new Result(
+                    mode,
+                    profileScore,
+                    tier,
+                    total,
+                    excludedByIelts,
+                    ambitious,
+                    target,
+                    safe,
+                    LocalDateTime.now()
+            );
+        }
+
+        // 6) PREDICT mode: respect desiredCount with dynamic split
+        int available = ambitious.size() + target.size() + safe.size();
+        int N = desiredCount <= 0 ? available : Math.min(desiredCount, available);
+
+        int[] quotas = computeQuotas(N); // [amb, tgt, safe]
+
+        List<ScoredUniversity> finalAmb = new ArrayList<>();
+        List<ScoredUniversity> finalTgt = new ArrayList<>();
+        List<ScoredUniversity> finalSafe = new ArrayList<>();
+
+        // Take per-bucket up to quota
+        takeUpTo(ambitious, quotas[0], finalAmb);
+        takeUpTo(target, quotas[1], finalTgt);
+        takeUpTo(safe, quotas[2], finalSafe);
+
+        // Track what's already picked
+        Set<University> picked = new HashSet<>();
+        finalAmb.forEach(s -> picked.add(s.uni));
+        finalTgt.forEach(s -> picked.add(s.uni));
+        finalSafe.forEach(s -> picked.add(s.uni));
+
+        int pickedCount = finalAmb.size() + finalTgt.size() + finalSafe.size();
+
+        // 7) If we still have fewer than N, top-up from remaining (best-ranked across all buckets)
+        if (pickedCount < N) {
+            List<ScoredUniversity> remaining = new ArrayList<>();
+            for (ScoredUniversity s : ambitious) {
+                if (!picked.contains(s.uni)) remaining.add(s);
+            }
+            for (ScoredUniversity s : target) {
+                if (!picked.contains(s.uni)) remaining.add(s);
+            }
+            for (ScoredUniversity s : safe) {
+                if (!picked.contains(s.uni)) remaining.add(s);
+            }
+            remaining.sort(BY_RANK_THEN_NAME);
+
+            for (ScoredUniversity s : remaining) {
+                if (pickedCount >= N) break;
+                switch (s.bucket) {
+                    case AMBITIOUS -> finalAmb.add(s);
+                    case TARGET -> finalTgt.add(s);
+                    case SAFE -> finalSafe.add(s);
                 }
-                continue;
-            }
-
-            // For all others, use score thresholds:
-            // score < 0      → Ambitious
-            // 0 ≤ score < 2  → Target
-            // score ≥ 2      → Safe (safer, not guaranteed)
-            if (s.score < 0.0) {
-                amb.add(s);
-            } else if (s.score < 2.0) {
-                tar.add(s);
-            } else {
-                saf.add(s);
+                picked.add(s.uni);
+                pickedCount++;
             }
         }
 
-        // 5. If LIST_ONLY, keep them all but still bucket by risk.
-        // If PREDICT, we still show all, but the user’s desired count is in the profile.
-
-        // 6. Build warnings
-        List<String> warnings = new ArrayList<>();
-
-        if (amb.stream().anyMatch(s -> s.uni.getGlobalRank() > 0 && s.uni.getGlobalRank() <= 10)) {
-            warnings.add("Top-10 global programs are treated as STRICT Ambitious. Even strong profiles should treat them as high-risk.");
+        // 8) If we somehow exceeded N (due to rounding), trim in Safe → Target → Ambitious order
+        pickedCount = finalAmb.size() + finalTgt.size() + finalSafe.size();
+        if (pickedCount > N) {
+            int excess = pickedCount - N;
+            excess = trimList(finalSafe, excess);
+            if (excess > 0) excess = trimList(finalTgt, excess);
+            if (excess > 0) trimList(finalAmb, excess);
         }
 
-        boolean anyTop30Safe = saf.stream()
-                .anyMatch(s -> s.uni.getGlobalRank() > 0 && s.uni.getGlobalRank() <= 30);
-        if (anyTop30Safe) {
-            warnings.add("A program with global rank ≤ 30 slipped into Safe. Treat it as Target or Ambitious in real life.");
-        }
-
-        boolean anyTop50Safe = saf.stream()
-                .anyMatch(s -> s.uni.getGlobalRank() > 0 && s.uni.getGlobalRank() <= 50);
-        if (anyTop50Safe) {
-            warnings.add("Some 'Safe' universities are still top-50 globally. Admissions remain highly competitive.");
-        }
-
-        if (p.budgetUsd > 0) {
-            warnings.add("Budget-based filtering is currently not enforced in code. Confirm tuition and cost of living manually.");
-        }
-
-        warnings.add("No bucket guarantees admission. Use these categories as guidance only, and double-check each program’s selectivity.");
-
-        return new Result(amb, tar, saf, warnings, profileLabel, now);
+        return new Result(
+                mode,
+                profileScore,
+                tier,
+                total,
+                excludedByIelts,
+                finalAmb,
+                finalTgt,
+                finalSafe,
+                LocalDateTime.now()
+        );
     }
 
-    // ---------------- INTERNAL HELPERS ----------------
+    // ------------ Profile logic ------------
 
-    private double computeProfileStrength(EligibilityProfile p) {
-        double s = 0.0;
+    private static ProfileTier classifyTier(double score) {
+        if (score >= 90.0) return ProfileTier.EXCEPTIONAL;
+        if (score >= 80.0) return ProfileTier.VERY_STRONG;
+        if (score >= 70.0) return ProfileTier.STRONG;
+        if (score >= 60.0) return ProfileTier.GOOD;
+        if (score >= 45.0) return ProfileTier.DEVELOPING;
+        return ProfileTier.BASIC;
+    }
 
-        // CGPA weight
-        if (p.cgpa10 >= 9.0)      s += 3.0;
-        else if (p.cgpa10 >= 8.5) s += 2.5;
-        else if (p.cgpa10 >= 8.0) s += 2.0;
-        else if (p.cgpa10 >= 7.5) s += 1.5;
-        else if (p.cgpa10 >= 7.0) s += 1.0;
-        else                      s += 0.5;
+    // ------------ Bucket logic ------------
 
-        // IELTS
-        if (p.ielts >= 8.0)      s += 1.0;
-        else if (p.ielts >= 7.5) s += 0.8;
-        else if (p.ielts >= 7.0) s += 0.6;
-        else if (p.ielts >= 6.5) s += 0.4;
-
-        // GRE
-        if (p.hasGre) {
-            double qBoost = (p.greQuant - 155) / 2.0;   // 160 → +2.5
-            double vBoost = (p.greVerbal - 150) / 4.0;  // 160 → +2.5
-            s += Math.max(0, qBoost) + Math.max(0, vBoost);
+    private static Bucket classifyBucket(University u, ProfileTier tier) {
+        int r = safeGlobalRank(u);
+        if (r <= 0) {
+            // Unknown rank → treat as SAFE
+            return Bucket.SAFE;
         }
 
-        // Experience
-        s += Math.min(3.0, p.yearsExperience * 0.3); // up to +3
+        // Hard rule: global top-15 are ALWAYS Ambitious
+        if (r <= 15) {
+            return Bucket.AMBITIOUS;
+        }
 
-        // Research
-        s += Math.min(3.0, p.researchPapers * 0.5); // up to +3
+        // Two boundaries per tier:
+        //  r <= b1 → Ambitious
+        //  r <= b2 → Target
+        //  else    → Safe
+        int b1;
+        int b2;
+        switch (tier) {
+            case EXCEPTIONAL -> {
+                b1 = 20;
+                b2 = 80;
+            }
+            case VERY_STRONG -> {
+                b1 = 50;
+                b2 = 150;
+            }
+            case STRONG -> {
+                b1 = 80;
+                b2 = 200;
+            }
+            case GOOD -> {
+                b1 = 150;
+                b2 = 300;
+            }
+            case DEVELOPING -> {
+                b1 = 250;
+                b2 = 500;
+            }
+            case BASIC -> {
+                b1 = 400;
+                b2 = 800;
+            }
+            default -> {
+                b1 = 250;
+                b2 = 500;
+            }
+        }
 
-        return s;
+        if (r <= b1) return Bucket.AMBITIOUS;
+        if (r <= b2) return Bucket.TARGET;
+        return Bucket.SAFE;
     }
 
-    private String labelProfileStrength(double s) {
-        if (s >= 8.0) return "very strong";
-        if (s >= 6.0) return "strong";
-        if (s >= 4.0) return "solid";
-        if (s >= 2.5) return "developing";
-        return "early stage";
+    private static int safeGlobalRank(University u) {
+        int r = u.getGlobalRank();
+        if (r <= 0) return 9999;
+        return r;
     }
 
-    private double estimateDifficultyFromRank(int globalRank) {
-        if (globalRank <= 0) return 4.0; // unknown → moderate difficulty
-        if (globalRank <= 10) return 9.0;
-        if (globalRank <= 30) return 7.5;
-        if (globalRank <= 60) return 6.0;
-        if (globalRank <= 100) return 5.0;
-        if (globalRank <= 200) return 4.5;
-        return 3.5;
+    // ------------ Fit score (for tie-breaking / future use) ------------
+
+    private static double computeFitScore(University u, EligibilityProfile p) {
+        // Lower global rank is better → higher score
+        int r = safeGlobalRank(u);
+        double base = -r;
+
+        double bonus = 0.0;
+        if (u.hasResearchLab()) bonus += 5.0;
+        if (u.isOnCampus()) bonus += 2.0;
+
+        // You can later add profile-based bonuses here (e.g., match with research-heavy programs)
+        return base + bonus;
+    }
+
+    private static List<String> buildReasons(University u, Bucket bucket) {
+        List<String> reasons = new ArrayList<>();
+        int r = u.getGlobalRank();
+        if (r > 0) {
+            reasons.add("global rank " + r);
+        }
+        if (u.hasResearchLab()) {
+            reasons.add("active research lab");
+        }
+        if (u.isOnCampus()) {
+            reasons.add("on-campus program");
+        }
+        reasons.add(bucket.name().toLowerCase() + " bucket by profile & rank");
+        return reasons;
+    }
+
+    // ------------ Distribution logic ------------
+
+    /**
+     * Compute ambitious / target / safe quotas for N universities.
+     *
+     * If N <= 5 : 20% A, 60% T, 20% S
+     * If N <= 10: 30% A, 50% T, 20% S
+     * If N <= 15: 25% A, 50% T, 25% S
+     * If N > 15 : 20% A, 40% T, 40% S
+     */
+    private static int[] computeQuotas(int N) {
+        double pa, pt, ps;
+        if (N <= 5) {
+            pa = 0.20; pt = 0.60; ps = 0.20;
+        } else if (N <= 10) {
+            pa = 0.30; pt = 0.50; ps = 0.20;
+        } else if (N <= 15) {
+            pa = 0.25; pt = 0.50; ps = 0.25;
+        } else {
+            pa = 0.20; pt = 0.40; ps = 0.40;
+        }
+
+        int a = (int) Math.round(N * pa);
+        int t = (int) Math.round(N * pt);
+        int s = (int) Math.round(N * ps);
+
+        int sum = a + t + s;
+
+        // Adjust to ensure a + t + s == N
+        while (sum < N) {
+            // Give extra to Target by default, then Safe, then Ambitious
+            if (t <= s && t <= a) t++;
+            else if (s <= a) s++;
+            else a++;
+            sum = a + t + s;
+        }
+        while (sum > N) {
+            // Remove from Safe first, then Target, then Ambitious
+            if (s > 0) s--;
+            else if (t > 0) t--;
+            else if (a > 0) a--;
+            sum = a + t + s;
+        }
+
+        return new int[]{a, t, s};
+    }
+
+    private static void takeUpTo(List<ScoredUniversity> src, int count, List<ScoredUniversity> dest) {
+        for (int i = 0; i < src.size() && dest.size() < count; i++) {
+            dest.add(src.get(i));
+        }
+    }
+
+    /**
+     * Trim up to `excess` entries from the end of the list.
+     *
+     * @return remaining excess after trimming this list.
+     */
+    private static int trimList(List<ScoredUniversity> list, int excess) {
+        int canTrim = Math.min(excess, list.size());
+        for (int i = 0; i < canTrim; i++) {
+            list.remove(list.size() - 1);
+        }
+        return excess - canTrim;
     }
 }
