@@ -18,7 +18,7 @@
 
 ## 🏷️ Overview
 
-A robust, reproducible command line tool for university admissions decision making.
+A robust, reproducible command line tool for university admissions decision making.  
 Predicts “Ambitious / Target / Safe” universities using a transparent profile scoring system and a well-documented global dataset.
 
 ---
@@ -48,14 +48,14 @@ Predicts “Ambitious / Target / Safe” universities using a transparent profil
 
 ## ⚡ Quick Start
 
-**Requirements:**
+**Requirements:**  
 - Java 11+  
 - Python 3.7+ (dataset/script support)
 
 ```bash
 git clone https://github.com/vssk18/UNIVERSITY-RECOMMENDATION-SYSTEM.git
 cd UNIVERSITY-RECOMMENDATION-SYSTEM
-make run
+make run      # Compile and launch the CLI
 ```
 
 Manual build/run:
@@ -69,6 +69,11 @@ Validate dataset:
 ```bash
 python3 data/validate_dataset.py data/universities_complete.csv
 ```
+Other useful commands ([see Makefile](Makefile)):
+```bash
+make clean    # Remove build artifacts and logs
+```
+
 ---
 
 ## 🗂️ Project Structure
@@ -97,50 +102,63 @@ UNIVERSITY-RECOMMENDATION-SYSTEM/
 ├── docs/
 │   ├── SYSTEM_OVERVIEW.md                        # High level flow
 │   ├── PROFILE_SCORING.md                        # Detailed scoring formula
-│   ├── BUCKET_LOGIC.md                           # Logic for bucket split
-│   ├── DATASET_FORMAT.md                         # Column by column explanation
-│   ├── CONTRIBUTING.md                           # Dev workflow
+│   ├── BUCKET_LOGIC.md                           # Ambitious/Target/Safe logic
+│   ├── DATASET_FORMAT.md                         # Column explanations
+│   ├── CONTRIBUTING.md                           # Dev & PR workflow
 │   └── CHANGELOG.md                              # Version history
 ├── tools/
 │   └── cpp_summary/                              # C++ dataset summary tool
 ├── runs/                                         # Saved logs per CLI run
-├── .github/                                      # CI workflows, if enabled
+├── .github/                                      # CI/CD workflows & templates
 ├── LICENSE
 ├── Makefile
 └── README.md
 ```
+
 ---
 
 ## 💡 How It Works
 
-- **Input:** Interactive CLI (course/region/GPA/IELTS/GRE/exp/research/budget/#apps)
-- **Profile scoring:** Weighted logic for 6-tier categorization ([docs/PROFILE_SCORING.md])
-- **Bucket assignment:** Ambitious/Target/Safe determined by rank and tier ([docs/BUCKET_LOGIC.md])
-- **Filtering:** All user constraints applied
-- **Results:** Table with bucket, rank, notes; full log in `/runs`
+- **Input:** Interactive CLI (course, region, GPA, IELTS, GRE, experience, research, budget, app count)
+- **Profile scoring:** Weighted logic for 6-tier categorization ([docs/PROFILE_SCORING.md](docs/PROFILE_SCORING.md))
+- **Bucket assignment:** Ambitious/Target/Safe—rank and tier-driven ([docs/BUCKET_LOGIC.md](docs/BUCKET_LOGIC.md))
+- **Filtering:** All user constraints honored per execution
+- **Results:** Bucketed, ranked tables per run; each run saved to `/runs`
 
 ---
 
 ## 📊 Dataset
 
-- `universities_complete.csv` (470+ universities, multi-region)
-- Documentation in `COMPLETE_DATASET_README.md`, `DATASET_FORMAT.md`
-- Python script: `validate_dataset.py`
+- `universities_complete.csv` (470+ global universities, multi-region)
+- Documentation: [COMPLETE_DATASET_README.md](data/COMPLETE_DATASET_README.md), [DATASET_FORMAT.md](docs/DATASET_FORMAT.md)
+- Validation script: [validate_dataset.py](data/validate_dataset.py)
 - Columns: name, country, region, course, ranking, IELTS, cost, research, campus, etc.
+
+---
+
+## 📚 Documentation
+
+- [docs/SYSTEM_OVERVIEW.md](docs/SYSTEM_OVERVIEW.md): Architecture and data flow
+- [docs/PROFILE_SCORING.md](docs/PROFILE_SCORING.md): Scoring formulas and explanation
+- [docs/BUCKET_LOGIC.md](docs/BUCKET_LOGIC.md): Bucket/logics and rationale
+- [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md): PR instructions, workflow, style
+- [docs/CHANGELOG.md](docs/CHANGELOG.md): Release notes and updates
 
 ---
 
 ## 🤝 Contributing
 
-- PR workflow ([docs/CONTRIBUTING.md])
-- Add/expand dataset, logic, filters, features—open to all levels!
+- New contributions, issues, and PRs are welcome!
+- Follow the [CONTRIBUTING.md](docs/CONTRIBUTING.md) guide for coding standards, PR steps, and roadmap.
+- Begin by filing an issue or pull request—see docs for details.
 
 ---
 
 ## 📄 License & Policies
 
-MIT License ([LICENSE])  
-[CODE_OF_CONDUCT.md] | [SECURITY.md]
+- Released under the [MIT License](LICENSE)—free use, modification, and distribution.
+- Please follow the [Code of Conduct](CODE_OF_CONDUCT.md) for all interactions.
+- For vulnerabilities, misuse, or privacy concerns, see [SECURITY.md](SECURITY.md) or email svaranas3@gitam.in.
 
 ---
 
@@ -153,4 +171,4 @@ B.Tech CSE (Cybersecurity), GITAM University, Hyderabad
 
 ---
 
-_Built for real applicants, fully reproducible and ready for portfolio, research, or open-source contribution.
+Built for real applicants, fully reproducible and ready for portfolio, research, or open source improvement.
